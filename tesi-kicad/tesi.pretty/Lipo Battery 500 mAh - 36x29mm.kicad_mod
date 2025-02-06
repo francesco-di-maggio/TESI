@@ -1,0 +1,139 @@
+(footprint "Lipo Battery 500 mAh - 36x29mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "LiPo Battery"
+		(at 0 0 -90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "81467dc0-6df1-4286-8eb6-5414164e4181")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Lipo Battery 500 mAh - 36x29mm"
+		(at 4.4 16.9 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c459c73f-2338-4c75-ab19-dddf2fde56bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "240fd237-3786-4d03-9967-c2b4b764f19a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cd6af3d0-f0e5-478e-b1bb-64cd09a5006c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a6dc043d-543d-4bea-8695-4b9fd799a3c4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -18 -14.5)
+		(end 18 -14.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "e01ad7f0-2fd1-4374-b983-e32831cbdb3a")
+	)
+	(fp_line
+		(start -18 14.5)
+		(end -18 -14.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1d957a70-a394-4a47-8899-bf6a05cd2faf")
+	)
+	(fp_line
+		(start 18 -14.5)
+		(end 18 14.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7354ea27-8b43-4255-95e4-64e59874442b")
+	)
+	(fp_line
+		(start 18 14.5)
+		(end -18 14.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "648332f4-d9e1-4daf-b67a-bdca1a226b62")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "F.SilkS")
+		(uuid "c6af0cc5-4f4c-4d03-846a-049c7520922c")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads not_allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy -18 -14.5) (xy 18 -14.5) (xy 18 14.5) (xy -18 14.5)
+			)
+		)
+	)
+)

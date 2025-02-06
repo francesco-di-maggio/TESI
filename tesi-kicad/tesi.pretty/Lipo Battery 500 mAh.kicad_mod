@@ -1,0 +1,163 @@
+(footprint "Lipo Battery 500 mAh"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 11.5 7.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "81467dc0-6df1-4286-8eb6-5414164e4181")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Lipo Battery 500 mAh"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c459c73f-2338-4c75-ab19-dddf2fde56bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "240fd237-3786-4d03-9967-c2b4b764f19a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cd6af3d0-f0e5-478e-b1bb-64cd09a5006c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a6dc043d-543d-4bea-8695-4b9fd799a3c4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -15.5 -10)
+		(end 15.5 -10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9712cb00-4f41-47ce-b5fd-b9df0e68edea")
+	)
+	(fp_line
+		(start -15.5 10)
+		(end -15.5 -10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "dcdbeb40-6aec-4880-a2af-c4678a8a77e2")
+	)
+	(fp_line
+		(start 15.5 -10)
+		(end 15.5 10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "cb7be05d-294a-43b5-b612-703bf5300683")
+	)
+	(fp_line
+		(start 15.5 10)
+		(end -15.5 10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "e831dac2-029c-4342-8c36-4c1e06aa9d8f")
+	)
+	(fp_text user "LiPo Battery"
+		(at -4.5 0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b9887ff8-367b-4f0b-af90-9a70e840e678")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "960963c4-1b66-4f0a-9ec7-bf88230da680")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "F.SilkS")
+		(uuid "528be1ce-c044-4077-b96a-e0aaec0df2ac")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads not_allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy -15.5 -10) (xy 15.5 -10) (xy 15.5 10) (xy -15.5 10)
+			)
+		)
+	)
+)

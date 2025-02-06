@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "tesi")(type "KiCad")(uri "${KIPRJMOD}/tesi.pretty")(options "")(descr ""))
+)

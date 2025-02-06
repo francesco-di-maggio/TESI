@@ -1,0 +1,338 @@
+(footprint "VL53L1X"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
+	(tags "Arduino Nano")
+	(property "Reference" "VL53L1X"
+		(at 12.5 8.5 180)
+		(layer "F.SilkS")
+		(uuid "509a0f1d-6540-44cd-97e5-cff4c62d3971")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VL53L1X"
+		(at 11.303 8.5 180)
+		(layer "F.Fab")
+		(uuid "854801aa-c0f2-443a-8d31-fbf3951e74f1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 1.143 16.51 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b6075f4-2587-4f1f-be42-1a45c57f483a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 1.143 16.51 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dc1bf3ce-7d15-4012-8b9a-3d69c19be3a4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 1.143 16.51 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e98abbd1-bbf8-434b-ad6a-9a722b654ee4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -0.127 -0.13)
+		(end -0.127 17.907)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "07250a2e-81e0-4533-86c1-dcbea254cd22")
+	)
+	(fp_line
+		(start -0.127 17.907)
+		(end 25.527 17.907)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "31830bcf-81b1-4337-8db1-757f2c351419")
+	)
+	(fp_line
+		(start 25.527 -0.127)
+		(end -0.127 -0.13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1faa271f-4735-4e3b-b401-e55038c0d2af")
+	)
+	(fp_line
+		(start 25.527 17.907)
+		(end 25.527 -0.127)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "be5da91c-c81f-42cc-b5eb-47d640e61c25")
+	)
+	(fp_line
+		(start -0.2286 18.0086)
+		(end -0.217 -0.2286)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "79dec9f8-6e12-4259-8a51-9108118b554a")
+	)
+	(fp_line
+		(start -0.2286 18.0086)
+		(end 25.6286 18.0086)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "26cb220d-49c8-4d9e-9fd5-96449d9f6261")
+	)
+	(fp_line
+		(start 25.6286 -0.2286)
+		(end -0.217 -0.2286)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f6825422-2a58-42d0-8570-68d83d7074a4")
+	)
+	(fp_line
+		(start 25.6286 -0.2286)
+		(end 25.6286 18.0086)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "67c3cfb2-e3bc-4a90-9cce-35bbd05092be")
+	)
+	(fp_line
+		(start 0 0)
+		(end 25.4 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4e577789-b767-4d96-afc4-97fce6740a64")
+	)
+	(fp_line
+		(start 0 17.78)
+		(end 0 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "87edb117-2064-4446-b9e8-284a940ff2eb")
+	)
+	(fp_line
+		(start 25.4 0)
+		(end 25.4 17.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1ae71026-34c9-426b-918b-b69e7e23985f")
+	)
+	(fp_line
+		(start 25.4 17.78)
+		(end 0 17.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "11f2556e-eb7c-4498-836c-439962ed53d3")
+	)
+	(fp_text user "SCL"
+		(at 10.414 17.272 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "04163505-b4ca-44e0-bc1a-c295073776b2")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GPIO"
+		(at 14.986 17.272 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "23281020-2598-4d14-abfa-ed211bf0ef99")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "Vin"
+		(at 5.307 17.272 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "26261371-8c3c-4e13-84f6-c6b8fd62008f")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "XSHUT"
+		(at 17.018 13.97 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2c0b2368-f2f0-479d-b463-a3b742d74835")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at 7.62 13.97 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "acf94798-01c0-4d04-a593-afb7f7272140")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "SDA"
+		(at 12.8016 13.97 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "ce4d215d-b5e0-46ec-9475-c74186ec5f14")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 11.303 10.16 180)
+		(layer "F.Fab")
+		(uuid "7f1073a2-03eb-4087-801d-7261c467611f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 6.35 15.24 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c7e63fdc-fec1-431f-8c41-2a49a3b35dc3")
+	)
+	(pad "2" thru_hole oval
+		(at 8.89 15.24 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4949234a-9012-4261-b022-7f36546aa874")
+	)
+	(pad "3" thru_hole oval
+		(at 11.43 15.24 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "15062e8e-abdf-4bb9-b9ca-34c7469e17bf")
+	)
+	(pad "4" thru_hole oval
+		(at 13.97 15.24 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ca27bd47-503d-4590-8956-f4205e9c5ba6")
+	)
+	(pad "5" thru_hole oval
+		(at 16.51 15.24 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6a4fd4dd-ce22-4f4d-8377-1d39980dcb90")
+	)
+	(pad "6" thru_hole oval
+		(at 19.05 15.24 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "04b155eb-140b-451b-9e12-f8b47bc056e1")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Module.3dshapes/Arduino_Nano_WithMountingHoles.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
