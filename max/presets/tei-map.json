@@ -1,0 +1,48 @@
+{
+	"pattrstorage" : 	{
+		"name" : "tei-map",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"mo.noteout::port" : [ 1 ],
+					"mo.noteout::channel" : [ 1.0 ],
+					"mo.noteout::note" : [ 60.0 ],
+					"mo.noteout::mute" : [ 0.0 ],
+					"mo.noteout[1]::port" : [ 1 ],
+					"mo.noteout[1]::channel" : [ 2.0 ],
+					"mo.noteout[1]::note" : [ 60.0 ],
+					"mo.noteout[1]::mute" : [ 0.0 ],
+					"mo.noteout[2]::port" : [ 1 ],
+					"mo.noteout[2]::channel" : [ 3.0 ],
+					"mo.noteout[2]::note" : [ 60.0 ],
+					"mo.noteout[2]::mute" : [ 0.0 ],
+					"mo.noteout[3]::port" : [ 1 ],
+					"mo.noteout[3]::channel" : [ 4.0 ],
+					"mo.noteout[3]::note" : [ 60.0 ],
+					"mo.noteout[3]::mute" : [ 0.0 ],
+					"mo.noteout[4]::port" : [ 1 ],
+					"mo.noteout[4]::channel" : [ 5.0 ],
+					"mo.noteout[4]::note" : [ 60.0 ],
+					"mo.noteout[4]::mute" : [ 0.0 ],
+					"mo.noteout[5]::port" : [ 1 ],
+					"mo.noteout[5]::channel" : [ 6.0 ],
+					"mo.noteout[5]::note" : [ 60.0 ],
+					"mo.noteout[5]::mute" : [ 0.0 ],
+					"mo.ctlout::port" : [ 1 ],
+					"mo.ctlout::channel" : [ 1.0 ],
+					"mo.ctlout::cc" : [ 1.0 ],
+					"mo.ctlout::mute" : [ 0.0 ],
+					"mo.ctlout[1]::port" : [ 1 ],
+					"mo.ctlout[1]::channel" : [ 6.0 ],
+					"mo.ctlout[1]::cc" : [ 1.0 ],
+					"mo.ctlout[1]::mute" : [ 0.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

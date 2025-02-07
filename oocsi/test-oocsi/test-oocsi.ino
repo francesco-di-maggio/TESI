@@ -1,0 +1,75 @@
+/******************************************************************************
+   Example of the OOCSI-ESP library connecting to WiFi and sending messages
+   over OOCSI. Designed to work with the Processing OOCSI receiver example
+   that is provided in the same directory
+ ******************************************************************************/
+
+#include "OOCSI.h"
+
+// use this if you want the OOCSI-ESP library to manage the connection to the Wifi
+// SSID of your Wifi network, the library currently does not support WPA2 Enterprise networks
+const char* ssid = "VRV951743477E";
+// Password of your Wifi network.
+const char* password = "43210Sijm";
+
+// name for connecting with OOCSI (unique handle)
+// const char* OOCSIName = "ESP_OOCSI_CLIENT_SENDER_####";
+const char* OOCSIName = "ESP_OOCSI_CLIENT_SENDER";
+// put the adress of your OOCSI server here, can be URL or IP address string
+// const char* hostserver = "your OOCSI server address";
+const char* hostserver = "oocsi.id.tue.nl";
+
+// OOCSI reference for the entire sketch
+OOCSI oocsi = OOCSI();
+
+// put your setup code here, to run once:
+void setup() {
+  Serial.begin(115200);
+
+  // output OOCSI activity on the built-in LED
+  // pinMode(LED_BUILTIN, OUTPUT);
+  // oocsi.setActivityLEDPin(LED_BUILTIN);
+
+  // use this to switch off logging to Serial
+  // oocsi.setLogging(false);
+
+  // setting up OOCSI. processOOCSI is the name of the function to call when receiving messages, can be a random function name
+  // connect wifi and OOCSI to the server
+  oocsi.connect(OOCSIName, hostserver, ssid, password);
+}
+
+// put your main code here, to run repeatedly:
+void loop() {
+  // create a new message
+  oocsi.newMessage("esp_testchannel");
+
+  // add data (primitive data types int, float, long, string)
+  // the labels such as "count" or "timestamp" are completely free to choose
+  // oocsi.addString("greeting" , "hello world!");
+  // oocsi.addInt("count", 40);
+  // oocsi.addFloat("float_point1", sin(millis()));
+  // oocsi.addFloat("float_point2", sin(millis()));
+  // oocsi.addFloat("float_point3", sin(millis()));
+  // oocsi.addFloat("float_point4", sin(millis()));
+  // oocsi.addLong("time", (long) millis());
+
+  // sending arrays
+  // int theIntArray[] = {45, 55, 60};
+  // oocsi.addIntArray("intArray" , theIntArray , 3);
+
+  float theFloatArray[] = {55.0, 65.0, 75.0};
+  oocsi.addFloatArray("floatArray", theFloatArray, 3);
+
+  // this command will send the message; don't forget to call this after creating a message
+  oocsi.sendMessage();
+
+  // prints out the raw message (how it is sent to the OOCSI server)
+  // oocsi.printSendMessage();
+
+  // let OOCSI keep the connection to the OOCSI server fresh and crunchy
+  // use this keepAlive() function if you do NOT need to receive data from OOCSI
+  // use the check() function if you also need to process incoming messages
+  // oocsi.check();
+  oocsi.keepAlive();
+  delay(50);
+}
