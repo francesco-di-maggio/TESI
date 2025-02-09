@@ -5,7 +5,7 @@
 	(layer "F.Cu")
 	(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 	(tags "Arduino Nano")
-	(property "Reference" "MPR121"
+	(property "Reference" "REF**"
 		(at 15.25 8.5 180)
 		(layer "F.SilkS")
 		(uuid "509a0f1d-6540-44cd-97e5-cff4c62d3971")
@@ -17,9 +17,8 @@
 		)
 	)
 	(property "Value" "MPR121"
-		(at 15.24 6.35 180)
+		(at 15.3 21.5 180)
 		(layer "F.Fab")
-		(hide yes)
 		(uuid "854801aa-c0f2-443a-8d31-fbf3951e74f1")
 		(effects
 			(font
@@ -299,8 +298,8 @@
 			(justify left bottom)
 		)
 	)
-	(fp_text user "3Vo"
-		(at 8.89 13.97 0)
+	(fp_text user "3V"
+		(at 9.1 13.97 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "6cc0ebe5-79d5-4777-9731-86f9111c130f")

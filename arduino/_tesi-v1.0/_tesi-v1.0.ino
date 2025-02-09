@@ -30,16 +30,19 @@
 // -------------------------------------------------------------------------
 
 // WiFi credentials
+const char* ssid = "VRV951743477E";      // Network SSID
+const char* pass = "43210Sijm";          // Network password
 
-const char* ssid = "iotroam";            // Network SSID
-const char* pass = "esp-tei25";          // Network password
+// const char* ssid = "iotroam";            // Network SSID
+// const char* pass = "esp-tei25";          // Network password
 
 WiFiUDP Udp;                             // UDP instance for OSC communication
 
-// const IPAddress outIp(192, 168, 2, 138); // Remote IP of your computer
-const IPAddress outIp(145, 116, 45, 125); // Remote IP of your computer
+const IPAddress outIp(192, 168, 2, 135); // Remote IP of your computer
+// const IPAddress outIp(145, 116, 45, 125); // Remote IP of your computer
+
 const unsigned int outPort = 8000;       // Remote port to receive OSC
-const unsigned int localPort = 9000;     // local port to listen for OSC packets (actually not used for sending)
+const unsigned int localPort = 9000;     // Local port to listen for OSC packets (actually not used for sending)
 
 // BNO055
 // Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire);
@@ -47,16 +50,17 @@ Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);
 
 // -------------------------------------------------------------------------
 // LDR
-const int ldrPin = A2; // Connect LDR to pin (with appropriate resistor divider)
+const int ldrPin = A4; // Connect LDR to pin (with appropriate resistor divider)
 
-// Global variable to track the maximum LDR value
-int maxLDR = 100;  // Start with a small default value to avoid division by zero
+// Global variable to track the minimum and maximum values
+int ldrMin = 40; // Minimum distance threshold
+int ldrMax = 0;  // Start with a small default value to avoid division by zero
 float ldr = 0.0;
 const float ldrSmooth = 0.4;  // Adjust smoothing factor (0.0 - 1.0, lower = smoother)
 
 // -------------------------------------------------------------------------
 // MIC KY-038
-const int micPin = A4; // KY-038 connected to A4
+const int micPin = A3;
 
 // Fixed min/max calibration values
 const int micMin = 100;
@@ -75,20 +79,29 @@ const int samples = 50; // Samples per second (adjust as needed)
 // MPR121
 Adafruit_MPR121 cap = Adafruit_MPR121(); // MPR121 touch sensor instance
 const uint8_t MPR121_ADDR = 0x5A;        // Default I2C address for MPR121
-const int BUTTON_COUNT = 6;              // Buttons 1 to 6
+const int BUTTON_COUNT = 8;              // Buttons 1 to 8
 
 int lastTouched = 0;   // Previous MPR121 touch state
 int currTouched = 0;   // Current MPR121 touch state
 
 // -------------------------------------------------------------------------
+// POT
+const int potPin = A2;
+
+// Variable to store the smoothed value
+float pot = 0.0;
+const int potMin = 0;    // Minimum raw reading (adjust if needed)
+const int potMax = 4095; // Maximum raw reading for ESP32 (12-bit ADC)
+
+// -------------------------------------------------------------------------
 // PUSH
-const int pushPin = 15;
+const int pushPin = 25;
 
 // -------------------------------------------------------------------------
 // RGB LED
-const int redPin = 27;    // Red LED pin
-const int greenPin = 21;  // Green LED pin
-const int bluePin = 39;    // Blue LED pin
+const int redPin = 15;    // Red LED pin
+const int greenPin = 33;  // Green LED pin
+const int bluePin = 27;    // Blue LED pin
 
 // Uncomment this line if using a Common Anode LED
 #define COMMON_ANODE
@@ -102,6 +115,12 @@ const float distanceSmooth = 0.6;  // Set this to 0.1 for high smoothing, 0.9 fo
 
 // Variable to store the smoothed value
 float distance = 0.0;
+
+// Global variable to track the minimum and maximum distance values
+int distanceMin = 20; // Minimum distance threshold
+int distanceMax = 0;  // Start with a small default value to avoid division by zero
+
+
 // -------------------------------------------------------------------------
 // SETUP 
 // -------------------------------------------------------------------------
@@ -153,7 +172,7 @@ void setup() {
     Serial.println("No BNO055 detected. Check wiring or I2C ADDR!");
     while (1) { delay(10); } // Halt execution if BNO055 is not detected
   }
-  Serial.println("BNO055 initialized."); 
+  Serial.println("BNO055 initialized!"); 
 
   // Use external crystal for better accuracy
   bno.setExtCrystalUse(true);
@@ -163,23 +182,28 @@ void setup() {
     Serial.println("No MPR121 detected. Check wiring or I2C ADDR!");
     while (1) { delay(10); } // Halt execution if MPR121 is not detected
   }
-  Serial.println("MPR121 initialized."); 
+  Serial.println("MPR121 initialized!"); 
 
   if (sensor.begin() != 0) {
     Serial.println("No VL53L4CX detected. Check wiring or I2C ADDR!");
     while (1) { delay(10); }
   }
-  Serial.println("VL53L4CX initialized."); 
+  Serial.println("VL53L4CX initialized!"); 
 
   sensor.InitSensor(0x10);  // Default I2C address
   sensor.VL53L4CX_StartMeasurement();  
 
+  // delay(500);
+  calibrateMaxDistance(); // Perform initial calibration at startup
+  calibrateMaxLDR();      // Perform initial LDR calibration at startup
+  // delay(500);
+
   // Green light
   setColor(0, 255, 0); 
-
   delay(1000);
 
-  setColor(0, 0, 0); // RGB off  
+  // RGB off  
+  setColor(0, 0, 0);
 }
 
 // -------------------------------------------------------------------------
@@ -187,13 +211,14 @@ void setup() {
 // -------------------------------------------------------------------------
 
 void loop() {
-  readAccelAndSendOSC();    // Read and send accelerometer data
+  // readAccelAndSendOSC();    // Read and send accelerometer data
   readQuatAndSendOSC();     // Read and send quaternions
   readLDRAndSendOSC();      // Read and send LDR value
   readMICAndSendOSC();      // Read and send mic level
   readButtonsAndSendOSC();  // Read and send button states
   readPushAndSendOSC();     // Read and send push state
   readDistanceAndSendOSC(); // Read and send distance value
+  readPOTAndSendOSC();      // Read and send potentiometer value
   
   // Adjust sampling rate if necessary
   delay(5); 

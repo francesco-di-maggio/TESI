@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(layer "F.Cu")
-	(property "Reference" "REF**"
-		(at 11.5 7.5 0)
+	(property "Reference" "LiPo Battery"
+		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "81467dc0-6df1-4286-8eb6-5414164e4181")
@@ -107,19 +107,6 @@
 		(layer "F.SilkS")
 		(uuid "e831dac2-029c-4342-8c36-4c1e06aa9d8f")
 	)
-	(fp_text user "LiPo Battery"
-		(at -4.5 0.5 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "b9887ff8-367b-4f0b-af90-9a70e840e678")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-			(justify left bottom)
-		)
-	)
 	(fp_text user "${REFERENCE}"
 		(at 0 2.5 0)
 		(unlocked yes)
@@ -129,34 +116,6 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
-			)
-		)
-	)
-	(zone
-		(net 0)
-		(net_name "")
-		(layer "F.SilkS")
-		(uuid "528be1ce-c044-4077-b96a-e0aaec0df2ac")
-		(hatch edge 0.5)
-		(connect_pads
-			(clearance 0)
-		)
-		(min_thickness 0.25)
-		(filled_areas_thickness no)
-		(keepout
-			(tracks allowed)
-			(vias allowed)
-			(pads not_allowed)
-			(copperpour allowed)
-			(footprints not_allowed)
-		)
-		(fill
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-		)
-		(polygon
-			(pts
-				(xy -15.5 -10) (xy 15.5 -10) (xy 15.5 10) (xy -15.5 10)
 			)
 		)
 	)

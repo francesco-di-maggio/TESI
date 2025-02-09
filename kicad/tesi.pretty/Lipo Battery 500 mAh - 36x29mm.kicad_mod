@@ -108,32 +108,4 @@
 		(layer "F.SilkS")
 		(uuid "648332f4-d9e1-4daf-b67a-bdca1a226b62")
 	)
-	(zone
-		(net 0)
-		(net_name "")
-		(layer "F.SilkS")
-		(uuid "c6af0cc5-4f4c-4d03-846a-049c7520922c")
-		(hatch edge 0.5)
-		(connect_pads
-			(clearance 0)
-		)
-		(min_thickness 0.25)
-		(filled_areas_thickness no)
-		(keepout
-			(tracks allowed)
-			(vias allowed)
-			(pads not_allowed)
-			(copperpour allowed)
-			(footprints not_allowed)
-		)
-		(fill
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-		)
-		(polygon
-			(pts
-				(xy -18 -14.5) (xy 18 -14.5) (xy 18 14.5) (xy -18 14.5)
-			)
-		)
-	)
 )

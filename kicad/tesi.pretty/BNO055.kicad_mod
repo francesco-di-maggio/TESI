@@ -198,8 +198,8 @@
 		(layer "F.Fab")
 		(uuid "11f2556e-eb7c-4498-836c-439962ed53d3")
 	)
-	(fp_text user "3vo"
-		(at 8.5344 17.78 0)
+	(fp_text user "3V"
+		(at 8.9 17.78 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "04163505-b4ca-44e0-bc1a-c295073776b2")
@@ -237,8 +237,8 @@
 			(justify left bottom)
 		)
 	)
-	(fp_text user "Vin"
-		(at 6.069 17.78 0)
+	(fp_text user "VIN"
+		(at 6.2 17.78 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "26261371-8c3c-4e13-84f6-c6b8fd62008f")

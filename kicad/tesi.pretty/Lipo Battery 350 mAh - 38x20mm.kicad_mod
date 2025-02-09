@@ -1,10 +1,10 @@
-(footprint "Lipo Battery 400 mAh"
+(footprint "Lipo Battery 350 mAh - 38x20mm"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(layer "F.Cu")
 	(property "Reference" "LiPo Battery"
-		(at 0 0 0)
+		(at 0 0 -90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "81467dc0-6df1-4286-8eb6-5414164e4181")
@@ -15,10 +15,11 @@
 			)
 		)
 	)
-	(property "Value" "Lipo Battery 400 mAh"
-		(at 0 1 0)
+	(property "Value" "Lipo Battery 350 mAh - 38x20mm"
+		(at 0 13 0)
 		(unlocked yes)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "c459c73f-2338-4c75-ab19-dddf2fde56bb")
 		(effects
 			(font
@@ -67,56 +68,15 @@
 		)
 	)
 	(attr smd)
-	(fp_line
-		(start -18 -8.5)
-		(end 18 -8.5)
+	(fp_rect
+		(start -19 -10)
+		(end 19 10)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
+		(fill none)
 		(layer "F.SilkS")
-		(uuid "085216fe-5dea-456f-b8e8-d152edb2716a")
-	)
-	(fp_line
-		(start -18 8.5)
-		(end -18 -8.5)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "2867f146-52ee-47be-a2bc-59a0e6123a35")
-	)
-	(fp_line
-		(start 18 -8.5)
-		(end 18 8.5)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "1ca7d70b-7182-422d-957d-1c2a78bd2db6")
-	)
-	(fp_line
-		(start 18 8.5)
-		(end -18 8.5)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "de88180a-d645-47ad-90bc-8c6224994086")
-	)
-	(fp_text user "${REFERENCE}"
-		(at 0 2.5 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(uuid "960963c4-1b66-4f0a-9ec7-bf88230da680")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
+		(uuid "4907710e-a533-4e36-b801-8aa0d6798afe")
 	)
 )

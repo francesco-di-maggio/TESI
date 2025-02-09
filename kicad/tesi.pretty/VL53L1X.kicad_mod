@@ -5,7 +5,7 @@
 	(layer "F.Cu")
 	(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 	(tags "Arduino Nano")
-	(property "Reference" "VL53L1X"
+	(property "Reference" "REF**"
 		(at 12.5 8.5 180)
 		(layer "F.SilkS")
 		(uuid "509a0f1d-6540-44cd-97e5-cff4c62d3971")
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "VL53L1X"
-		(at 11.303 8.5 180)
+		(at 11.8 21.2 180)
 		(layer "F.Fab")
 		(uuid "854801aa-c0f2-443a-8d31-fbf3951e74f1")
 		(effects
@@ -188,85 +188,85 @@
 		(uuid "11f2556e-eb7c-4498-836c-439962ed53d3")
 	)
 	(fp_text user "SCL"
-		(at 10.414 17.272 0)
+		(at 10.1 17.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "04163505-b4ca-44e0-bc1a-c295073776b2")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
 	(fp_text user "GPIO"
-		(at 14.986 17.272 0)
+		(at 14.7 17.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "23281020-2598-4d14-abfa-ed211bf0ef99")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
-	(fp_text user "Vin"
-		(at 5.307 17.272 0)
+	(fp_text user "VIN"
+		(at 5.2 17.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "26261371-8c3c-4e13-84f6-c6b8fd62008f")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
 	(fp_text user "XSHUT"
-		(at 17.018 13.97 0)
+		(at 16.8 13.97 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "2c0b2368-f2f0-479d-b463-a3b742d74835")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
 	(fp_text user "GND"
-		(at 7.62 13.97 0)
+		(at 7.4 13.97 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "acf94798-01c0-4d04-a593-afb7f7272140")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
 	(fp_text user "SDA"
-		(at 12.8016 13.97 0)
+		(at 12.6 13.97 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "ce4d215d-b5e0-46ec-9475-c74186ec5f14")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
+				(size 1 1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
 	(fp_text user "${REFERENCE}"
-		(at 11.303 10.16 180)
+		(at 12.1 23.1 180)
 		(layer "F.Fab")
 		(uuid "7f1073a2-03eb-4087-801d-7261c467611f")
 		(effects
