@@ -1811,10 +1811,10 @@
 			)
 		)
 		(symbol "MPR121_1_1"
-			(pin open_collector line
-				(at -12.7 -7.62 0)
+			(pin power_in line
+				(at -3.81 -20.32 90)
 				(length 2.54)
-				(name "INT"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2010,9 +2010,9 @@
 				)
 			)
 			(pin input line
-				(at -12.7 1.27 0)
+				(at -12.7 -10.16 0)
 				(length 2.54)
-				(name "SCL"
+				(name "ADDR"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2027,26 +2027,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 0 20.32 270)
-				(length 2.54)
-				(name "Vin"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "20"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin bidirectional line
-				(at -12.7 -1.27 0)
+				(at -12.7 -3.81 0)
 				(length 2.54)
 				(name "SDA"
 					(effects
@@ -2064,9 +2046,9 @@
 				)
 			)
 			(pin input line
-				(at -12.7 -10.16 0)
+				(at -12.7 -1.27 0)
 				(length 2.54)
-				(name "ADDR"
+				(name "SCL"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2081,10 +2063,10 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -12.7 8.89 0)
+			(pin open_collector line
+				(at -12.7 3.81 0)
 				(length 2.54)
-				(name "3Vo"
+				(name "IRQ"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2100,9 +2082,9 @@
 				)
 			)
 			(pin power_in line
-				(at -3.81 -20.32 90)
+				(at 0 20.32 270)
 				(length 2.54)
-				(name "GND"
+				(name "3.3V"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2110,24 +2092,6 @@
 					)
 				)
 				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 12.7 -16.51 180)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
