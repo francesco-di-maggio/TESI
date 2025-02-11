@@ -5,8 +5,8 @@
 	(layer "F.Cu")
 	(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 	(tags "Arduino Nano")
-	(property "Reference" "BNO055"
-		(at 13.75 10 180)
+	(property "Reference" "REF**"
+		(at 14 10 180)
 		(layer "F.SilkS")
 		(uuid "509a0f1d-6540-44cd-97e5-cff4c62d3971")
 		(effects
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "BNO055"
-		(at 23.75 22 180)
+		(at 14.5 24.5 180)
 		(layer "F.Fab")
 		(hide yes)
 		(uuid "854801aa-c0f2-443a-8d31-fbf3951e74f1")
