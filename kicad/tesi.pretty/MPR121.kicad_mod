@@ -67,16 +67,45 @@
 		)
 	)
 	(attr through_hole)
-	(fp_rect
+	(fp_line
 		(start -14.9 -10)
+		(end 15.1 -10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b46949cf-ddfd-426a-9496-d3203dedaa43")
+	)
+	(fp_line
+		(start -14.9 10)
+		(end -14.9 -10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "218d8f4f-62af-4916-9373-2f0a9802c582")
+	)
+	(fp_line
+		(start 15.1 -10)
 		(end 15.1 10)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
 		(layer "F.SilkS")
-		(uuid "c048f305-e4e1-4a30-a72b-3a5ec5a3d627")
+		(uuid "64872b8b-dfe4-4054-a534-b295e1d9fa14")
+	)
+	(fp_line
+		(start 15.1 10)
+		(end -14.9 10)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "5df048da-8cfe-4e0a-a173-5b3683e038b8")
 	)
 	(fp_text user "0"
 		(at -14.488 6.55 -90)
@@ -455,6 +484,34 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "59a4cc04-701b-4376-9005-58bf36a059d4")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "F.SilkS")
+		(uuid "120fc986-3f99-4c20-8e92-4d21172a4988")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads not_allowed)
+			(copperpour allowed)
+			(footprints allowed)
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy -14.9 -10) (xy 15.1 -10) (xy 15.1 10) (xy -14.9 10)
+			)
+		)
 	)
 	(model "${KICAD8_3DMODEL_DIR}/Module.3dshapes/Arduino_Nano_WithMountingHoles.wrl"
 		(offset

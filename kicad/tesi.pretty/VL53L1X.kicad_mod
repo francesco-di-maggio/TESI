@@ -6,7 +6,7 @@
 	(descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
 	(tags "Arduino Nano")
 	(property "Reference" "REF**"
-		(at 0.4 -2.592304 180)
+		(at 0 -4 180)
 		(layer "F.SilkS")
 		(uuid "509a0f1d-6540-44cd-97e5-cff4c62d3971")
 		(effects
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "VL53L1X"
-		(at -0.9 8.43 180)
+		(at 0 9 180)
 		(layer "F.Fab")
 		(uuid "854801aa-c0f2-443a-8d31-fbf3951e74f1")
 		(effects
@@ -68,89 +68,38 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start -9.5 -5.4)
-		(end 9.5 -5.4)
+		(start -12.5 -0.126159)
+		(end -7.998232 -0.126159)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "68f5c0a3-540d-4cfc-a035-b57613829459")
+		(uuid "33397466-7fe4-41e4-9bab-f9d2b1c75a07")
 	)
 	(fp_line
-		(start -9.5 -1.95)
-		(end -9.5 -5.4)
+		(start 12.5 -0.126159)
+		(end 7.998232 -0.126159)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "4f287037-a310-45f3-a2cd-d19bb8a520c4")
+		(uuid "a37ffc67-2d09-498e-be59-1de42244f3a2")
 	)
-	(fp_line
-		(start -9.5 1.85)
-		(end -9.5 5.3)
+	(fp_rect
+		(start -7.5 -5.476159)
+		(end 7.5 5.223841)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
+		(fill none)
 		(layer "F.SilkS")
-		(uuid "d6e834d9-a7e1-44a1-9262-c297c7c1c78d")
-	)
-	(fp_line
-		(start -9.5 5.3)
-		(end 9.5 5.3)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "2dafc44d-e2b9-4768-be66-ffa21c7528e4")
-	)
-	(fp_line
-		(start 9.5 -1.850694)
-		(end 9.5 -5.4)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "ee00c880-6cbe-401d-9341-33f790e2a268")
-	)
-	(fp_line
-		(start 9.5 1.750694)
-		(end 9.5 5.3)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "650336e6-ab73-49c1-9118-9c42a85fd092")
-	)
-	(fp_arc
-		(start -9.5 1.85)
-		(mid -11.4 -0.05)
-		(end -9.5 -1.95)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "b4f2933c-b98b-4b4c-abba-ca603ab025ea")
-	)
-	(fp_arc
-		(start 9.5 -1.850694)
-		(mid 11.300694 -0.05)
-		(end 9.5 1.750694)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "2c069321-b3d2-495b-91eb-00f0ad919d91")
+		(uuid "b7c85854-1e2a-4701-a31b-f1d22923cd37")
 	)
 	(fp_text user "SCL"
-		(at -0.44 2.807696 90)
+		(at -0.67 2.807696 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "04163505-b4ca-44e0-bc1a-c295073776b2")
@@ -163,7 +112,7 @@
 		)
 	)
 	(fp_text user "GPIO1"
-		(at 4.62 2.807696 90)
+		(at 4.39 2.807696 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "23281020-2598-4d14-abfa-ed211bf0ef99")
@@ -176,7 +125,7 @@
 		)
 	)
 	(fp_text user "VIN"
-		(at -5.5 2.807696 90)
+		(at -5.73 2.807696 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "26261371-8c3c-4e13-84f6-c6b8fd62008f")
@@ -189,7 +138,7 @@
 		)
 	)
 	(fp_text user "XSHUT"
-		(at 7.15 2.777696 90)
+		(at 6.92 2.777696 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "2c0b2368-f2f0-479d-b463-a3b742d74835")
@@ -202,7 +151,7 @@
 		)
 	)
 	(fp_text user "GND"
-		(at -2.97 2.777696 90)
+		(at -3.2 2.777696 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "acf94798-01c0-4d04-a593-afb7f7272140")
@@ -215,7 +164,7 @@
 		)
 	)
 	(fp_text user "SDA"
-		(at 2.09 2.777696 90)
+		(at 1.86 2.777696 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "ce4d215d-b5e0-46ec-9475-c74186ec5f14")
@@ -228,7 +177,7 @@
 		)
 	)
 	(fp_text user "${REFERENCE}"
-		(at -0.6 10.33 180)
+		(at 0.3 10.9 180)
 		(layer "F.Fab")
 		(uuid "7f1073a2-03eb-4087-801d-7261c467611f")
 		(effects
@@ -239,7 +188,7 @@
 		)
 	)
 	(pad "1" thru_hole oval
-		(at -6.15 4.047696 90)
+		(at -6.38 4.047696 90)
 		(size 1.6 1.6)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -247,7 +196,7 @@
 		(uuid "c7e63fdc-fec1-431f-8c41-2a49a3b35dc3")
 	)
 	(pad "2" thru_hole oval
-		(at -3.61 4.047696 90)
+		(at -3.84 4.047696 90)
 		(size 1.6 1.6)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -255,7 +204,7 @@
 		(uuid "4949234a-9012-4261-b022-7f36546aa874")
 	)
 	(pad "3" thru_hole oval
-		(at -1.07 4.047696 90)
+		(at -1.3 4.047696 90)
 		(size 1.6 1.6)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -263,7 +212,7 @@
 		(uuid "15062e8e-abdf-4bb9-b9ca-34c7469e17bf")
 	)
 	(pad "4" thru_hole oval
-		(at 1.47 4.047696 90)
+		(at 1.24 4.047696 90)
 		(size 1.6 1.6)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -271,7 +220,7 @@
 		(uuid "ca27bd47-503d-4590-8956-f4205e9c5ba6")
 	)
 	(pad "5" thru_hole oval
-		(at 4.01 4.047696 90)
+		(at 3.78 4.047696 90)
 		(size 1.6 1.6)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -279,7 +228,7 @@
 		(uuid "6a4fd4dd-ce22-4f4d-8377-1d39980dcb90")
 	)
 	(pad "6" thru_hole oval
-		(at 6.55 4.047696 90)
+		(at 6.32 4.047696 90)
 		(size 1.6 1.6)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
