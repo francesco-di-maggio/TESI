@@ -2,15 +2,19 @@
      TESI
      
    © 2025 Francesco Di Maggio
-     Modified: 20-01-2025
+     Modified: 17-02-2025
    
     - Connect ESP32 Huzzah32 Feather Board to WiFi
-    1. Read MPR121 buttons 1 to 6
-    2. Read LDR on A0
+    1. Read MPR121 buttons 2 to 9
+    2. Read LDR
     3. Read BNO055 on I2C
-    4. Read KY-038 mic level
+    4. Read MAX4466 mic level
     5. Read VL53L4CX distance
     - Send each value as a separate OSC message
+
+    TO DO:
+    - Implement OOCSI code
+    - Optimize code
 ------------------------------------------------------------------------ */
 
 #include <Wire.h>
@@ -28,23 +32,21 @@
 // WiFi & OSC Configurations
 // -------------------------------------------------------------------------
 
-// const char* ssid = "VRV951743477E";      // Network SSID
-// const char* pass = "43210Sijm";          // Network password
+const char* ssid = "VRV951743477E";      // Network SSID
+const char* pass = "43210Sijm";          // Network password
+const IPAddress outIp(192, 168, 2, 153); // Remote IP of your computer
 
-const char* ssid = "iotroam";            // Network SSID
-const char* pass = "esp-tei25";          // Network password
+// const char* ssid = "iotroam";             // Network SSID
+// const char* pass = "esp-tei25";           // Network password
+// const IPAddress outIp(145, 116, 45, 125); // Remote IP of your computer
 
 WiFiUDP Udp;                             // UDP instance for OSC communication
 
-// const IPAddress outIp(192, 168, 2, 135); // Remote IP of your computer
-const IPAddress outIp(145, 116, 45, 125); // Remote IP of your computer
-
 const unsigned int outPort = 8000;       // Remote port to receive OSC
-// const unsigned int localPort = 9000;     // Local port to listen for OSC packets (actually not used for sending)
 
 // -------------------------------------------------------------------------
 // BATTERY
-#define BATTERY_PIN 35  // GPIO35 (A13) is internally connected to VBAT
+#define BATTERY_PIN A13  // GPIO35 (A13) is internally connected to VBAT
 
 // ADC parameters
 #define ADC_MAX 4095.0  // ESP32 uses a 12-bit ADC (0-4095)
@@ -54,6 +56,11 @@ const unsigned int outPort = 8000;       // Remote port to receive OSC
 // Battery voltage range
 #define BATTERY_FULL 4.2  // Voltage at 100%
 #define BATTERY_EMPTY 3.2  // Voltage at 0%
+#define BATTERY_INTERVAL 5000  // Adjust this to change how often it outputs
+#define BATTERY_SAMPLE_RATE 50 // Adjust this to change how many samples are averaged
+
+float batterySum = 0;
+int batterySamples = 0;
 
 // -------------------------------------------------------------------------
 // BNO055
@@ -63,35 +70,18 @@ Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);
 // -------------------------------------------------------------------------
 // LDR
 const int ldrPin = A4; // Connect LDR to pin (with appropriate resistor divider)
-
-// Global variable to track the minimum and maximum values
-int ldrMin = 40; // Minimum distance threshold
-int ldrMax = 0;  // Start with a small default value to avoid division by zero
 float ldr = 0.0;
-const float ldrSmooth = 0.4;  // Adjust smoothing factor (0.0 - 1.0, lower = smoother)
 
 // -------------------------------------------------------------------------
-// MIC KY-038
+// MAX4466
 const int micPin = A3;
-
-// Fixed min/max calibration values
-const int micMin = 100;
-const int micMax = 180;
-
-// Smoothing factor (0.0 = no smoothing, 1.0 = maximum smoothing)
-const float micSmooth = 0.4;  // Set this to 0.1 for high smoothing, 0.9 for low smoothing
-
-// Variable to store the smoothed value
-float mic = 0.0;
-
-// Variable sampling rate to determine min and max
-const int samples = 50; // Samples per second (adjust as needed)
+unsigned int mic;
+const int sampleWindow = 50;  // Sample window width in mS (50 mS = 20Hz)
 
 // -------------------------------------------------------------------------
 // MPR121
 Adafruit_MPR121 cap = Adafruit_MPR121(); // MPR121 touch sensor instance
 // const uint8_t MPR121_ADDR = 0x5A;        // Default I2C address for MPR121
-const int BUTTON_COUNT = 8;              // Buttons 1 to 8
 
 int lastTouched = 0;   // Previous MPR121 touch state
 int currTouched = 0;   // Current MPR121 touch state
@@ -104,16 +94,21 @@ const int potPin = A2;
 float pot = 0.0;
 const int potMin = 0;    // Minimum raw reading (adjust if needed)
 const int potMax = 4095; // Maximum raw reading for ESP32 (12-bit ADC)
+const float potSmooth = 0.6;  // Set this to 0.1 for high smoothing, 0.9 for low smoothing
 
 // -------------------------------------------------------------------------
 // PUSH
-const int pushPin = 25;
+const int pushPin = 26; // A0
 
 // -------------------------------------------------------------------------
 // RGB LED
-const int redPin = 15;    // Red LED pin
-const int greenPin = 33;  // Green LED pin
-const int bluePin = 27;    // Blue LED pin
+// const int redPin = 15;    // Red LED pin
+// const int greenPin = 33;  // Green LED pin
+// const int bluePin = 27;   // Blue LED pin
+
+const int redPin = 14;    // Red LED pin 15
+const int greenPin = 15;  // Green LED pin 33
+const int bluePin = 27;   // Blue LED pin = 27
 
 // Uncomment this line if using a Common Anode LED
 #define COMMON_ANODE
@@ -122,19 +117,12 @@ const int bluePin = 27;    // Blue LED pin
 // VL53L4CX
 VL53L4CX sensor(&Wire, -1);  // Initialize without XSHUT pin
 
-// Smoothing factor (0.0 = no smoothing, 1.0 = maximum smoothing)
-const float distanceSmooth = 0.6;  // Set this to 0.1 for high smoothing, 0.9 for low smoothing
-
 // Variable to store the smoothed value
 float distance = 0.0;
 
-// Global variable to track the minimum and maximum distance values
-int distanceMin = 20; // Minimum distance threshold
-int distanceMax = 0;  // Start with a small default value to avoid division by zero
-
 // Timing Variables
 unsigned long lastBNOTime = 0, lastButtonTime = 0, lastLDRTime = 0;
-unsigned long lastMICTime = 0, lastDistanceTime = 0, lastBatteryTime = 0;
+unsigned long lastMICTime = 0, lastDistanceTime = 0, lastBatteryTime = 0, lastBatterySampleTime = 0;
 
 // -------------------------------------------------------------------------
 // SETUP 
@@ -152,9 +140,15 @@ void setup() {
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
 
-  // Red light on startup
   setColor(255, 0, 0); 
   delay(100);
+  setColor(0, 255, 0); 
+  delay(100);
+  setColor(0, 0, 255); 
+  delay(100);    
+
+  // Red light on startup
+  setColor(255, 0, 0); 
   
   // analogReadResolution(12);  // Set ESP32 ADC resolution to 12-bit (0-4095)
   // analogSetAttenuation(ADC_11db);  // Full 0-3.3V range  
@@ -165,6 +159,7 @@ void setup() {
   Wire.begin(); 
 
   // Connect to WiFi
+  Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
@@ -174,7 +169,7 @@ void setup() {
     delay(100);
     Serial.print(".");
   }
-  Serial.println("\nWiFi connected!");
+  Serial.println("WiFi connected!");
   // Serial.print("IP address: ");
   // Serial.println(WiFi.localIP());
 
@@ -183,15 +178,15 @@ void setup() {
     // Serial.print("UDP local port: ");
     // Serial.println(localPort);
   
-  // Set power-saving settings  
-  esp_wifi_set_ps(WIFI_PS_MIN_MODEM);
-  esp_wifi_set_max_tx_power(50);
-  WiFi.setSleep(true); // Enable sleep mode  
+  // // Set power-saving settings  
+  // esp_wifi_set_ps(WIFI_PS_MIN_MODEM);
+  // esp_wifi_set_max_tx_power(50);
+  // WiFi.setSleep(true); // Enable sleep mode  
 
   // Initialize BNO055
   if (!bno.begin()) {
     Serial.println("No BNO055 detected. Check wiring or I2C ADDR!");
-    while (1) { delay(10); } // Halt execution if BNO055 is not detected
+    // while (1) { delay(10); } // Halt execution if BNO055 is not detected
   }
   Serial.println("BNO055 initialized!"); 
 
@@ -201,21 +196,18 @@ void setup() {
 // Initialize MPR121
   if (!cap.begin(0x5A)) {
     Serial.println("No MPR121 detected. Check wiring or I2C ADDR!");
-    while (1) { delay(10); } // Halt execution if MPR121 is not detected
+    // while (1) { delay(10); } // Halt execution if MPR121 is not detected
   }
   Serial.println("MPR121 initialized!"); 
 
   if (sensor.begin() != 0) {
     Serial.println("No VL53L4CX detected. Check wiring or I2C ADDR!");
-    while (1) { delay(10); }
+    // while (1) { delay(10); }
   }
   Serial.println("VL53L4CX initialized!"); 
 
   sensor.InitSensor(0x10);  // Default I2C address
   sensor.VL53L4CX_StartMeasurement();  
-
-  calibrateMaxDistance(); // Perform initial calibration at startup
-  calibrateMaxLDR();      // Perform initial LDR calibration at startup
 
   // Green light
   setColor(0, 255, 0); 
@@ -229,52 +221,52 @@ void setup() {
 // LOOP
 // -------------------------------------------------------------------------
 
-// void loop() {
-//   // readAccelAndSendOSC();    // Read and send accelerometer data
-//   readQuatAndSendOSC();     // Read and send quaternions
-//   readLDRAndSendOSC();      // Read and send LDR value
-//   readMICAndSendOSC();      // Read and send mic level
-//   readButtonsAndSendOSC();  // Read and send button states
-//   readPushAndSendOSC();     // Read and send push state
-//   readDistanceAndSendOSC(); // Read and send distance value
-//   readPOTAndSendOSC();      // Read and send potentiometer value
-//   readBatteryAndSendOSC();  // Call function to print battery voltage & percentage
-  
-//   // Adjust sampling rate if necessary
-//   delay(5); 
-// }
-
 void loop() {
-  unsigned long currentMillis = millis();
-
-  if (currentMillis - lastBNOTime >= 20) {  
-      readQuatAndSendOSC();
-      lastBNOTime = currentMillis;
-  }
-
-  if (currentMillis - lastButtonTime >= 5) {  
-      readButtonsAndSendOSC();
-      readPushAndSendOSC();
-      lastButtonTime = currentMillis;
-  }
-
-  if (currentMillis - lastLDRTime >= 10) {  
-      readLDRAndSendOSC();
-      lastLDRTime = currentMillis;
-  }
-
-  if (currentMillis - lastMICTime >= 10) {  
-      readMICAndSendOSC();
-      lastMICTime = currentMillis;
-  }
-
-  if (currentMillis - lastDistanceTime >= 10) {  
-      readDistanceAndSendOSC();
-      lastDistanceTime = currentMillis;
-  }
-
-  if (currentMillis - lastBatteryTime >= 5000) {  
-      readBatteryAndSendOSC();
-      lastBatteryTime = currentMillis;
-  }
+  // readAccelAndSendOSC();    // Read and send accelerometer data
+  readQuatAndSendOSC();     // Read and send quaternions
+  readLDRAndSendOSC();      // Read and send LDR value
+  readMICAndSendOSC();      // Read and send mic level
+  readButtonsAndSendOSC();  // Read and send button states
+  readPushAndSendOSC();     // Read and send push state
+  readDistanceAndSendOSC(); // Read and send distance value
+  readPOTAndSendOSC();      // Read and send potentiometer value
+  readBatteryAndSendOSC();  // Call function to print battery voltage & percentage
+  
+  // Adjust sampling rate if necessary
+  delay(10); 
 }
+
+// void loop() {
+//   unsigned long currentMillis = millis();
+
+//   if (currentMillis - lastBNOTime >= 20) {  
+//       readQuatAndSendOSC();
+//       lastBNOTime = currentMillis;
+//   }
+
+//   if (currentMillis - lastButtonTime >= 5) {  
+//       readButtonsAndSendOSC();
+//       readPushAndSendOSC();
+//       lastButtonTime = currentMillis;
+//   }
+
+//   if (currentMillis - lastLDRTime >= 10) {  
+//       readLDRAndSendOSC();
+//       lastLDRTime = currentMillis;
+//   }
+
+//   if (currentMillis - lastMICTime >= 10) {  
+//       readMICAndSendOSC();
+//       lastMICTime = currentMillis;
+//   }
+
+//   if (currentMillis - lastDistanceTime >= 10) {  
+//       readDistanceAndSendOSC();
+//       lastDistanceTime = currentMillis;
+//   }
+
+//   if (currentMillis - lastBatteryTime >= 5000) {  
+//       readBatteryAndSendOSC();
+//       lastBatteryTime = currentMillis;
+//   }
+// }

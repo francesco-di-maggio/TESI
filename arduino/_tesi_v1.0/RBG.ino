@@ -11,6 +11,9 @@ void setColor(int red, int green, int blue) {
     blue = 255 - blue;
   #endif
 
+  // 10-bit = 1023
+  // 12-bit = 4095
+  
   // Set the RGB LED color using PWM
   // Scale 0-255 to 0-1023
   analogWrite(redPin, map(red, 0, 255, 0, 1023));

@@ -9,7 +9,7 @@ void readButtonsAndSendOSC() {
   // Create OSC message for button states
   OSCMessage msg("/cube/buttons");
 
-  for (int i = 1; i <= BUTTON_COUNT; i++) {
+  for (int i = 2; i <= 9; i++) {     // Start at pin 2
     bool isPressed = (currTouched & (1 << i));  // Current state for button i
     bool wasPressed = (lastTouched & (1 << i)); // Previous state for button i
 

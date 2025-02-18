@@ -3,30 +3,33 @@ Reads mic level from a KY-038 sound sensor.
 ------------------------------------------------------------------------- */
 
 void readMICAndSendOSC() {
-  int mn = 4095;
-  int mx = 0;
-  int val;
+  unsigned long startMillis = millis(); // Start of sample window
+  unsigned int peakToPeak = 0;   // peak-to-peak level
 
-  // Collect samples to determine min and max
-  for (int i = 0; i < samples; ++i) {
-    val = analogRead(micPin);
-    mn = min(mn, val);
-    mx = max(mx, val);
+  unsigned int signalMax = 0;
+  unsigned int signalMin = 4095;
+
+  // collect data for 50 mS and then plot data
+  while (millis() - startMillis < sampleWindow)
+  {
+    mic = analogRead(micPin);
+    if (mic < 4095)  // toss out spurious readings
+    {
+      if (mic > signalMax)
+      {
+        signalMax = mic;  // save just the max levels
+      }
+      else if (mic < signalMin)
+      {
+        signalMin = mic;  // save just the min levels
+      }
+    }
   }
-  
-  // Calculate the peak-to-peak variation
-  int delta = mx - mn;
-
-  // Normalize delta to 0.0 - 1.0 range using floating-point math
-  float normalized = (float)(delta - micMin) / (micMax - micMin);
-  normalized = constrain(normalized, 0.0, 1.0);
-
-  // Apply smoothing based on smoothing factor
-  mic = (micSmooth * normalized) + ((1.0 - micSmooth) * mic);
+  peakToPeak = signalMax - signalMin;  // max - min = peak-peak amplitude
 
   // Create OSC message for the LDR value
   OSCMessage msg("/cube/mic");
-  msg.add(mic);
+  msg.add(peakToPeak);
 
   // Send the OSC message
   Udp.beginPacket(outIp, outPort);

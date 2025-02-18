@@ -32,3 +32,6 @@ fp-info-cache
 
 # Desktop Services Store
 .DS_Store
+
+# Extras
+backups/
