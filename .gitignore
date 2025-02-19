@@ -3,10 +3,14 @@
 
 # Temporary files
 *.000
+*.als
+*.asd
+*.cfg
 *.bak
 *.bck
 *.kicad_pcb-bak
 *.kicad_sch-bak
+*.backup
 *-backups
 *.kicad_prl
 *.sch-bak
@@ -31,7 +35,11 @@ fp-info-cache
 *.csv
 
 # Desktop Services Store
-.DS_Store
+*.DS_Store
 
-# Extras
+# Backups
 backups/
+
+# Ableton Live icon files
+Icon?
+
