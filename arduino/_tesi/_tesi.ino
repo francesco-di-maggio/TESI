@@ -32,10 +32,6 @@
 // WiFi & OSC Configurations
 // -------------------------------------------------------------------------
 
-const char* ssid = "VRV951743477E";      // Network SSID
-const char* pass = "43210Sijm";          // Network password
-const IPAddress outIp(192, 168, 2, 153); // Remote IP of your computer
-
 // const char* ssid = "iotroam";             // Network SSID
 // const char* pass = "esp-tei25";           // Network password
 // const IPAddress outIp(145, 116, 45, 125); // Remote IP of your computer
