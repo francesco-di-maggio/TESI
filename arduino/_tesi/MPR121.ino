@@ -7,7 +7,7 @@ void readButtonsAndSendOSC() {
   currTouched = cap.touched();
 
   // Create OSC message for button states
-  OSCMessage msg("/cube/buttons");
+  OSCMessage msg("/tesi/buttons");
 
   for (int i = 2; i <= 9; i++) {     // Start at pin 2
     bool isPressed = (currTouched & (1 << i));  // Current state for button i

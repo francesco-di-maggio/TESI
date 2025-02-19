@@ -30,7 +30,7 @@ void readBatteryAndSendOSC() {
             // Serial.println("%");
 
             // Create OSC message
-            OSCMessage msg("/cube/battery");
+            OSCMessage msg("/tesi/battery");
             msg.add(batteryPercent);
 
             // Send the OSC message

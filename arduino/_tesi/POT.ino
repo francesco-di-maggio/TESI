@@ -7,7 +7,7 @@ void readPOTAndSendOSC() {
   pot = analogRead(potPin);  // Read the current POT value
 
   // Create OSC message for the LDR value
-  OSCMessage msg("/cube/pot");
+  OSCMessage msg("/tesi/pot");
   msg.add(pot);
 
   Udp.beginPacket(outIp, outPort);

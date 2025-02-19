@@ -2,7 +2,7 @@
 Reads the distance value from a VL53L4CX sensor and sends them via OSC.
 ------------------------------------------------------------------------- */
 
-void readDistanceAndSendOSC() {
+void readVL53L4CXAndSendOSC() {
   VL53L4CX_MultiRangingData_t rangingData;
   uint8_t newDataReady = 0;
 
@@ -15,7 +15,7 @@ void readDistanceAndSendOSC() {
       distance = (float)rangingData.RangeData[0].RangeMilliMeter;
 
       // Create OSC message for the LDR value
-      OSCMessage msg("/cube/distance");
+      OSCMessage msg("/tesi/distance");
       msg.add(distance);
 
       // Send the OSC message

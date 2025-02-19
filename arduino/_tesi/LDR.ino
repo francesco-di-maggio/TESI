@@ -7,7 +7,7 @@ void readLDRAndSendOSC() {
   ldr = analogRead(ldrPin);  // Read raw LDR value
 
   // Create and send OSC message
-  OSCMessage msg("/cube/ldr");
+  OSCMessage msg("/tesi/ldr");
   msg.add(ldr);
 
   Udp.beginPacket(outIp, outPort);

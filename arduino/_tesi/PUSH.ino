@@ -21,7 +21,7 @@ void readPushAndSendOSC() {
       setColor(0, 0, 0);
     }
 
-    OSCMessage msg("/cube/push");
+    OSCMessage msg("/tesi/push");
     msg.add(currentPush);
 
     Udp.beginPacket(outIp, outPort);

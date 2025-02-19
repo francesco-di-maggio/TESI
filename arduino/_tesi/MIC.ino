@@ -28,7 +28,7 @@ void readMICAndSendOSC() {
   peakToPeak = signalMax - signalMin;  // max - min = peak-peak amplitude
 
   // Create OSC message for the LDR value
-  OSCMessage msg("/cube/mic");
+  OSCMessage msg("/tesi/mic");
   msg.add(peakToPeak);
 
   // Send the OSC message

@@ -50,7 +50,7 @@ void readAccelAndSendOSC() {
   y = event.acceleration.y;
   z = event.acceleration.z;
 
-  OSCMessage msg("/cube/accel");
+  OSCMessage msg("/tesi/accel");
   msg.add(x);
   msg.add(y);
   msg.add(z);  
@@ -75,7 +75,7 @@ void readQuatAndSendOSC() {
   y = quat.y();
   z = quat.z();
 
-  OSCMessage msg("/cube/quat");
+  OSCMessage msg("/tesi/quat");
   msg.add(w);
   msg.add(x);
   msg.add(y);

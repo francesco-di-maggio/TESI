@@ -2,19 +2,20 @@
      TESI
      
    © 2025 Francesco Di Maggio
-     Modified: 17-02-2025
+     Modified: 18-02-2025
    
     - Connect ESP32 Huzzah32 Feather Board to WiFi
     1. Read MPR121 buttons 2 to 9
     2. Read LDR
     3. Read BNO055 on I2C
     4. Read MAX4466 mic level
-    5. Read VL53L4CX distance
+    5. Read VL53L4CX/VL53L1X distance
     - Send each value as a separate OSC message
 
     TO DO:
     - Implement OOCSI code
-    - Optimize code
+    - Smooth sensors and overall optimizazion
+    - delay() vs. millis()?
 ------------------------------------------------------------------------ */
 
 #include <Wire.h>
@@ -23,6 +24,7 @@
 #include <utility/imumaths.h>
 #include <Adafruit_MPR121.h>
 #include <vl53l4cx_class.h>
+#include "Adafruit_VL53L1X.h"
 
 #include <WiFi.h>
 #include <WiFiUdp.h>
@@ -32,13 +34,14 @@
 // WiFi & OSC Configurations
 // -------------------------------------------------------------------------
 
-// const char* ssid = "iotroam";             // Network SSID
-// const char* pass = "esp-tei25";           // Network password
-// const IPAddress outIp(145, 116, 45, 125); // Remote IP of your computer
+const char* ssid = "iotroam";               // Network SSID
+const char* pass = "esp-tei25";             // Network password
 
-WiFiUDP Udp;                             // UDP instance for OSC communication
+const IPAddress outIp(145, 116, 45, 125);   // Remote IP of your computer
 
-const unsigned int outPort = 8000;       // Remote port to receive OSC
+WiFiUDP Udp;                                // UDP instance for OSC communication
+
+const unsigned int outPort = 8000;          // Remote port to receive OSC
 
 // -------------------------------------------------------------------------
 // BATTERY
@@ -110,6 +113,13 @@ const int bluePin = 27;   // Blue LED pin = 27
 #define COMMON_ANODE
 
 // -------------------------------------------------------------------------
+// VL53L1X
+#define IRQ_PIN 2
+#define XSHUT_PIN 3
+
+Adafruit_VL53L1X vl53 = Adafruit_VL53L1X(XSHUT_PIN, IRQ_PIN);
+
+// -------------------------------------------------------------------------
 // VL53L4CX
 VL53L4CX sensor(&Wire, -1);  // Initialize without XSHUT pin
 
@@ -149,7 +159,7 @@ void setup() {
   // analogReadResolution(12);  // Set ESP32 ADC resolution to 12-bit (0-4095)
   // analogSetAttenuation(ADC_11db);  // Full 0-3.3V range  
   
-  // while (!Serial) delay(10);  // wait for serial port to open!
+  while (!Serial) delay(10);  // wait for serial port to open!
 
   // Initialize I2C communication
   Wire.begin(); 
@@ -205,6 +215,30 @@ void setup() {
   sensor.InitSensor(0x10);  // Default I2C address
   sensor.VL53L4CX_StartMeasurement();  
 
+  if (! vl53.begin(0x29, &Wire)) {
+    Serial.println("No VL53L1X detected. Check wiring or I2C ADDR!");
+    // Serial.println(vl53.vl_status);
+    // while (1) { delay(10); }
+  }
+  Serial.println("VL53L1X initialized!"); 
+
+  if (! vl53.startRanging()) {
+    Serial.print(F("Couldn't start ranging: "));
+    // Serial.println(vl53.vl_status);
+    // while (1)       delay(10);
+  }
+  Serial.println(F("Ranging started"));  
+
+  // Valid timing budgets: 15, 20, 33, 50, 100, 200 and 500ms!
+  vl53.setTimingBudget(50);
+  Serial.print(F("Timing budget (ms): "));
+  Serial.println(vl53.getTimingBudget());
+
+  /*
+  vl.VL53L1X_SetDistanceThreshold(100, 300, 3, 1);
+  vl.VL53L1X_SetInterruptPolarity(0);
+  */  
+
   // Green light
   setColor(0, 255, 0); 
   delay(500);
@@ -225,6 +259,7 @@ void loop() {
   readButtonsAndSendOSC();  // Read and send button states
   readPushAndSendOSC();     // Read and send push state
   readDistanceAndSendOSC(); // Read and send distance value
+  // readVL53L4CXAndSendOSC(); // Read and send distance value
   readPOTAndSendOSC();      // Read and send potentiometer value
   readBatteryAndSendOSC();  // Call function to print battery voltage & percentage
   
