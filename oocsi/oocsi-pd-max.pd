@@ -10,7 +10,6 @@
 #X obj 93 338 list append;
 #X msg 444 117 send unsubscribe esp_testchannel;
 #X obj 287 272 bng 25 250 50 0 empty empty empty 17 7 0 10 #191919 #e1e1e1 #e1e1e1;
-#X msg 398 90 send subscribe testchannel;
 #X text 59 61 Step 1 - Connect to OOCSI;
 #X msg 59 90 connect oocsi.id.tue.nl 4444;
 #X text 398 61 Step 3 -Subscribe to channel;
@@ -20,6 +19,7 @@
 #X text 47 309 Yes/No;
 #X text 124 212 receiving data from oocsi via TPC;
 #X text 287 309 Step 4 - Connect to Max;
+#X msg 398 90 send subscribe teichannel;
 #X connect 1 0 3 0 32.................BA...ry+++uP....67+++mF....;
 #X connect 2 0 3 0 32.................m....j4++++I....Y9+++6D....;
 #X connect 3 0 0 0 32.................T..........E.........bB....;
@@ -28,8 +28,8 @@
 #X connect 5 0 6 0 32.................Y....f0+++eF....X8+++GC....;
 #X connect 6 0 4 0 32.................L..........C.........bA....;
 #X connect 7 0 6 0 32.................AA...7y+++eP....+7+++uG....;
-#X connect 8 0 15 0 32.................K.........vB.........TA....;
+#X connect 8 0 14 0 32.................K.........vB.........TA....;
 #X connect 9 0 3 0 32.................m.....n++++I.....5+++6D....;
-#X connect 11 0 3 0 32.................BA...3p+++uP....t5+++mF....;
-#X connect 13 0 3 0 32.................0.........PM.........jF....;
-#X connect 15 0 6 0 32.................p.........fJ.........LE....;
+#X connect 12 0 3 0 32.................0.........PM.........jF....;
+#X connect 14 0 6 0 32.................p.........fJ.........LE....;
+#X connect 20 0 3 0 32.................BA...3p+++uP....t5+++mF....;
