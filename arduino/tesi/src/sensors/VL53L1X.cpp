@@ -11,8 +11,8 @@
 // kalmanMeasurementNoise: lower values make the filter more responsive
 static float kalmanEstimate = 0.0f;
 static float kalmanError = 1.0f;
-const float kalmanProcessNoise = 0.9f; // 0.5 Increase for quicker response (less smoothing)
-const float kalmanMeasurementNoise = 0.6f; // 1.0 Decrease for quicker response (less smoothing)
+const float kalmanProcessNoise = 1.5f; // 0.5 Increase for quicker response (less smoothing)
+const float kalmanMeasurementNoise = 0.5f; // 1.0 Decrease for quicker response (less smoothing)
 
 // -------------------------------------------------------------------------
 // Update Threshold (in mm)
