@@ -80,6 +80,6 @@ void sendLDR() {
         sendOSC("/tesi/ldr", ldrValue);
     }
     if (LDR.oocsi) {
-        sendOOCSI(CHANNEL, "ldr", ldrValue);
+        sendOOCSI(CHANNEL, "/tesi/ldr", ldrValue);
     }
 }

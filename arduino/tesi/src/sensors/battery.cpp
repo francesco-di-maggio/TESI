@@ -12,31 +12,47 @@ const float BATTERY_FULL = 3.7f;          // Voltage when battery is fully charg
 const float BATTERY_EMPTY = 3.2f;         // Voltage when battery is empty (0%)
 
 // -------------------------------------------------------------------------
-// Battery Voltage Reading Function (Integer Output)
+// EMA Smoothing Parameter
 // -------------------------------------------------------------------------
-// Reads the raw ADC value, converts it to a voltage, maps that voltage to a
-// percentage between 0 and 100, and returns the result as an integer.
+// Lower ALPHA_BATTERY means more smoothing (and slower response)
+const float ALPHA_BATTERY = 0.4f;
+
+// -------------------------------------------------------------------------
+// readBattery()
+// -------------------------------------------------------------------------
+// Reads the raw ADC value from BATTERY_PIN, converts it to a battery voltage,
+// maps that voltage to a percentage (0 to 100), and applies an EMA filter for smoothing.
 int readBattery() {
     int batteryRaw = analogRead(BATTERY_PIN);
-    float batteryVoltage = (batteryRaw / ADC_MAX) * REF_VOLTAGE * VOLTAGE_DIVIDER_RATIO;
-    int batteryPercent = constrain(map((int)(batteryVoltage * 100), (int)(BATTERY_EMPTY * 100), (int)(BATTERY_FULL * 100), 0, 100), 0, 100);
-    return batteryPercent;
+    float batteryVoltage = ((float)batteryRaw / ADC_MAX) * REF_VOLTAGE * VOLTAGE_DIVIDER_RATIO;
+    
+    // Map the voltage (scaled by 100) into a percentage
+    int batteryPercent = constrain(
+        map((int)(batteryVoltage * 100), (int)(BATTERY_EMPTY * 100), (int)(BATTERY_FULL * 100), 0, 100),
+        0, 100
+    );
+    
+    // Apply EMA filter to smooth the value
+    static float batteryEstimate = batteryPercent; // Initialize with first reading
+    batteryEstimate = ALPHA_BATTERY * batteryPercent + (1.0f - ALPHA_BATTERY) * batteryEstimate;
+    
+    return (int)(batteryEstimate + 0.5f); // Round to nearest int
 }
 
 // -------------------------------------------------------------------------
-// Unified Streaming Function for Battery
+// sendBattery()
 // -------------------------------------------------------------------------
-// Sends the battery percentage only if it has changed from the last sent value.
+// Sends the battery percentage via Serial, OSC, and OOCSI only if the new
+// filtered value differs from the last sent value.
 void sendBattery() {
     static int lastSentBattery = -1;  // Tracks the last sent battery percentage
     int batteryPercent = readBattery();
-
-    // Only send if the new value differs from the last value
+    
     if (batteryPercent == lastSentBattery) {
-        return;
+        return; // No change detected; do not send
     }
     lastSentBattery = batteryPercent;
-
+    
     if (BATTERY.serial) {
         sendSerial("Battery", batteryPercent);
     }
@@ -44,6 +60,6 @@ void sendBattery() {
         sendOSC("/tesi/battery", batteryPercent);
     }
     if (BATTERY.oocsi) {
-        sendOOCSI(CHANNEL, "battery", batteryPercent);
+        sendOOCSI(CHANNEL, "/tesi/battery", batteryPercent);
     }
 }

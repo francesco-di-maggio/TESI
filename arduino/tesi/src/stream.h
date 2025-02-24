@@ -8,7 +8,7 @@
 // --------------------------------------
 // Function Prototype
 // --------------------------------------
-void streamSensors(unsigned long currentMillis);
+void streamSensors(unsigned long now);
 
 // Sensor Data Transmission Functions
 void sendBattery();

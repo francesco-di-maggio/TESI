@@ -92,5 +92,5 @@ void sendPOT() {
     if (POT.osc)
         sendOSC("/tesi/pot", potValue);
     if (POT.oocsi)
-        sendOOCSI(CHANNEL, "pot", potValue);
+        sendOOCSI(CHANNEL, "/tesi/pot", potValue);
 }

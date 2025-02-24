@@ -1,20 +1,20 @@
 #include "config.h"
 
-// ----------------------
-// Sensor Configuration Values
-// ----------------------
-SensorConfig BATTERY  = {1, 1, 0, 0, 5000}; 
+// -------------------------------------------------------------------------
+// Define each sensor with its ON/OFF, OSC, Serial, OOCSI and Sample Rate settings
+// -------------------------------------------------------------------------
+SensorConfig BATTERY  = {1, 1, 0, 0, 5000}; // Batter ON/OFF, OSC, Serial, OOCSI, Refresh Rate (millis)
 SensorConfig LDR      = {1, 1, 0, 0, 10};
 SensorConfig MIC      = {1, 1, 0, 0, 10};
-SensorConfig POT      = {1, 1, 0, 0, 10};
+SensorConfig POT      = {1, 0, 0, 1, 10};
 SensorConfig DISTANCE = {1, 1, 0, 0, 20};
 SensorConfig QUAT     = {1, 1, 0, 0, 20};
-SensorConfig PUSH     = {1, 1, 0, 1, 10};
-SensorConfig CAP      = {1, 1, 0, 0, 10};
+SensorConfig PUSH     = {1, 0, 0, 1, 10};
+SensorConfig CAP      = {1, 0, 0, 1, 10};
 
-// ----------------------
+// -------------------------------------------------------------------------
 // WiFi & OSC Configuration
-// ----------------------
+// -------------------------------------------------------------------------
 #ifdef HOME_NETWORK
 const char* SSID = "VRV951743477E";        
 const char* PASS = "43210Sijm";        
@@ -28,17 +28,17 @@ const IPAddress OUT_IP(145, 116, 45, 125);
 const unsigned int OUT_PORT = 8000;
 WiFiUDP UDP;
 
-// ----------------------
+// -------------------------------------------------------------------------
 // OOCSI Configuration
-// ----------------------
-const char* OOCSIName = "1_####";
+// -------------------------------------------------------------------------
+const char* OOCSIName = "tesi_1_####";
 const char* HOSTSERVER = "oocsi.id.tue.nl";
-const char* CHANNEL = "teichannel";
+const char* CHANNEL = "tesichannel";
 OOCSI oocsi;  // Define the OOCSI object
 
-// ----------------------
+// -------------------------------------------------------------------------
 // Pin Definitions
-// ----------------------
+// -------------------------------------------------------------------------
 const int RED_PIN = 32, GREEN_PIN = 15, BLUE_PIN = 33;
 const int BATTERY_PIN = A13;
 const int LDR_PIN = A4, MIC_PIN = A3, POT_PIN = A2;

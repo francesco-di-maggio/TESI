@@ -98,6 +98,6 @@ void sendQUAT() {
         sendOSC("/tesi/quat", quatValues, 4);
     }
     if (QUAT.oocsi) {
-        sendOOCSI(CHANNEL, "quat", quatValues, 4);
+        sendOOCSI(CHANNEL, "/tesi/quat", quatValues, 4);
     }
 }

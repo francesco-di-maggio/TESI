@@ -16,10 +16,6 @@
     - Read PUSH2 on pin ?
     - Write RGB Led on pins ?
     - Send each value as a separate message using: OSC/SERIAL/OOCSI
-
-    TO DO:
-    - Smooth sensors
-    - Overall optimizazion
 ------------------------------------------------------------------------ */
 
 #include "src/config.h"
@@ -36,15 +32,13 @@ void setup() {
   Serial.begin(115200);
   Serial.println(F("Starting Serial Communication"));
 
-  // Set pins
   pinMode(PUSH1_PIN, INPUT_PULLUP);
   pinMode(PUSH2_PIN, INPUT_PULLUP);
   pinMode(RED_PIN, OUTPUT);
   pinMode(GREEN_PIN, OUTPUT);
   pinMode(BLUE_PIN, OUTPUT); 
 
-  // RED LIGHT!
-  setColor(255, 0, 0); 
+  setColor(255, 0, 0); // RED LIGHT!
 
   // printMacAddress();
 
@@ -54,16 +48,15 @@ void setup() {
 
   Serial.println(F("READY TO GO!"));
 
-  // GREEN LIGHT!
-  setColor(0, 255, 0); delay(500); setColor(0, 0, 0);
+  setColor(0, 255, 0); delay(500); setColor(0, 0, 0); // GREEN LIGHT!
 }
 
 // -------------------------------------------------------------------------
 // LOOP
 // -------------------------------------------------------------------------
 void loop() {
-  unsigned long currentMillis = millis();
-  streamSensors(currentMillis);
+  unsigned long now = millis();
+  streamSensors(now);
 
   // Use this keepAlive() function if you do NOT need to receive data from OOCSI
   // Use the check() function if you also need to process incoming messages
