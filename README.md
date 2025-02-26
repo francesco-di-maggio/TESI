@@ -1,7 +1,7 @@
 # TESI — TANGIBLE EMBODIED SOUND INTERACTION
 
-<p align="center">
-  <img alt="TESI" src="images/tesi-perfboard.jpg" width="500">
+<p align="left">
+  <img alt="TESI" src="images/tesi-perfboard.jpg" width="765">
 </p>
 
 ## About
@@ -10,12 +10,12 @@ TESI (Tangible Embodied Sound Interaction) is an open-source prototype designed 
 TESI is a modular, wireless, and networked interface, leveraging machine learning, decentralized communication, and digital musical instrument (DMI) design. 
 
 ### Features
-* Wireless and networked using ESP32 Feather V2 with [OOCSI](https://oocsi.id.tue.nl/) communication.
+* Wireless and networked using [Adafruit ESP32 Feather V2 - 8MB Flash + 2 MB PSRAM - STEMMA QT](https://www.adafruit.com/product/5400) and [OOCSI](https://oocsi.id.tue.nl/).
 * Multi-sensor data collection:
   * Motion (IMU) – BNO055
   * Light – Light-Dependent Resistor (LDR)
   * Distance – Time-of-flight (ToF)
-  * Capacitive touch – MPR121
+  * Capacitive Touch – MPR121
   * Audio – MAX4466
   * Potentiometer
 * Integration with [Max](https://cycling74.com/products/max) via TCP [(Sadam Library)](https://cycling74.com/packages/sadam-library) to process and map data to [Ableton Live](https://www.ableton.com/en/live/).
@@ -54,9 +54,6 @@ TESI operates as part of a system of interconnected objects, using OOCSI for dec
 * Collaborative sound generation
 * Adaptive, sensor-driven soundscapes
 
-### Next Presentation
-TESI's first prototype will be presented at (TEI'25)[https://tei.acm.org/2025/] (Tangible, Embedded, and Embodied Interaction) in Bordeaux, France, during a Studio session exploring sustainable, modular, and embodied interaction in sound design., ["Making Sense of Decentralized TUIs: A Modular Sound-Centric Approach"](https://sites.google.com/view/decentralized-sound-tuis/home).
-
 ### Research & Development
 TESI is part of my ongoing PhD research at TU Eindhoven, focusing on:
 
@@ -65,8 +62,11 @@ TESI is part of my ongoing PhD research at TU Eindhoven, focusing on:
 * Sound Interaction in TEI and IoT
 * Sustainable Interaction Design
 
-For academic references and publications, visit: 
+## Publications
 * Francesco Di Maggio, Bart Hengeveld, and Mathias Funk. 2025. [Making Sense of Decentralized TUIs: A Modular Sound-Centric Approach](https://dl.acm.org/doi/10.1145/3689050.3708332). Proceedings of the Nineteenth International Conference on Tangible, Embedded, and Embodied Interaction. Association for Computing Machinery, New York, NY, USA, Article 136, 1–3. https://doi.org/10.1145/3689050.3708332
+
+### Next Presentation
+TESI's first prototype will be presented at (TEI'25)[https://tei.acm.org/2025/] (Tangible, Embedded, and Embodied Interaction) in Bordeaux, France, during a Studio session exploring sustainable, modular, and embodied interaction in sound design., ["Making Sense of Decentralized TUIs: A Modular Sound-Centric Approach"](https://sites.google.com/view/decentralized-sound-tuis/home).
 
 ### Contribute & Collaborate
 TESI is open-source, and contributions are welcome. You can contribute by:
@@ -83,5 +83,5 @@ Designed and assembled at TU/e in the [d.search lab](https://research.tue.nl/en/
 ### OOCSI to Plugdata/Max Implementation
 Designed at TU/e with [Mathias Funk](https://mathias-funk.com/).
 
-### License
+## License
 TESI is released under the MIT License, making it free to use, modify, and share.
