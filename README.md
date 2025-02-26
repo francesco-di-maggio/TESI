@@ -1,6 +1,6 @@
 # TESI — TANGIBLE EMBODIED SOUND INTERACTION
 
-![TESI Prototype](images/tesi-perfboard.jpg)
+<img alt="TESI Prototype" src="images/tesi-perfboard.jpg" width="400">
 
 ## About
 TESI (Tangible Embodied Sound Interaction) is an open-source prototype designed as a sound-centered Tangible User Interface (TUI) for networked, interactive music systems. It enables real-time sensor-based interaction for embodied sound exploration.
