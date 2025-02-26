@@ -1,7 +1,5 @@
 # TESI — TANGIBLE EMBODIED SOUND INTERACTION
 
-[under construction]
-
 ![TESI Prototype](images/tesi-perfboard.jpg)
 
 ## About
