@@ -66,7 +66,7 @@ TESI is part of my ongoing PhD research at TU Eindhoven, focusing on:
 * Sustainable Interaction Design
 
 For academic references and publications, visit: 
-* Francesco Di Maggio, Bart Hengeveld, and Mathias Funk. 2025. [Making Sense of Decentralized TUIs: A Modular Sound-Centric Approach]((https://dl.acm.org/doi/10.1145/3689050.3708332)). Proceedings of the Nineteenth International Conference on Tangible, Embedded, and Embodied Interaction. Association for Computing Machinery, New York, NY, USA, Article 136, 1–3. https://doi.org/10.1145/3689050.3708332
+* Francesco Di Maggio, Bart Hengeveld, and Mathias Funk. 2025. [Making Sense of Decentralized TUIs: A Modular Sound-Centric Approach](https://dl.acm.org/doi/10.1145/3689050.3708332). Proceedings of the Nineteenth International Conference on Tangible, Embedded, and Embodied Interaction. Association for Computing Machinery, New York, NY, USA, Article 136, 1–3. https://doi.org/10.1145/3689050.3708332
 
 ### Contribute & Collaborate
 TESI is open-source, and contributions are welcome. You can contribute by:
