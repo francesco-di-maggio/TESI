@@ -2,7 +2,6 @@
 
 [under construction]
 
-TESI – Tangible Embodied Sound Interaction
 ![TESI Prototype](images/tesi-perfboard.jpg)
 
 ## About
