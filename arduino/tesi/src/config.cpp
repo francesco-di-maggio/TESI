@@ -16,12 +16,12 @@ SensorConfig CAP      = {1, 0, 0, 1, 10};
 // WiFi & OSC Configuration
 // -------------------------------------------------------------------------
 #ifdef HOME_NETWORK
-const char* SSID = "VRV951743477E";        
-const char* PASS = "43210Sijm";        
+const char* SSID = " ";        
+const char* PASS = " ";        
 const IPAddress OUT_IP(192, 168, 2, 153);
 #else
-const char* SSID = "iotroam";
-const char* PASS = "esp-tei25";
+const char* SSID = " ";
+const char* PASS = " ";
 const IPAddress OUT_IP(145, 116, 45, 125);
 #endif
 

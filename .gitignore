@@ -35,6 +35,7 @@ fp-info-cache
 
 # Backups
 *backups/
+*Backup/
 
 # Ableton Live icon files
 Icon?

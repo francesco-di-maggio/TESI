@@ -1,0 +1,63 @@
+{
+	"pattrstorage" : 	{
+		"name" : "tei-receive",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"mo.htab::voices" : [ 5.0 ],
+					"mo.htab::mode" : [ 0.0 ],
+					"mo.htab::tab" : [ -1 ],
+					"mo.htab::mute" : [ 0.0 ],
+					"mo.udpreceive::port" : [ "8000" ],
+					"mo.udpreceive::mute" : [ 0.0 ],
+					"mo.send::set" : [ "OSC" ],
+					"mo.send::mute" : [ 0.0 ],
+					"mo.send[1]::set" : [ "OOCSI" ],
+					"mo.send[1]::mute" : [ 0.0 ],
+					"mo.oocsi::status" : [ 1.0 ],
+					"mo.oocsi::mute" : [ 0.0 ],
+					"mo.oocsi::channel" : [ "tesichannel" ],
+					"mo.oocsi::port" : [ 4444.0 ],
+					"mo.oocsi::host" : [ "oocsi.id.tue.nl" ],
+					"mo.oocsi::client" : [ "client-####" ],
+					"mo.serial::port" : [ "wchusbserial58550221361" ],
+					"mo.serial::mute" : [ 0.0 ],
+					"mo.serial::baud" : [ "115200" ],
+					"mo.monitor::lines" : [ 1.0 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"mo.htab::voices" : [ 5.0 ],
+					"mo.htab::mode" : [ 0.0 ],
+					"mo.htab::tab" : [ -1 ],
+					"mo.htab::mute" : [ 0.0 ],
+					"mo.udpreceive::port" : [ "8000" ],
+					"mo.udpreceive::mute" : [ 0.0 ],
+					"mo.send::set" : [ "OSC" ],
+					"mo.send::mute" : [ 0.0 ],
+					"mo.send[1]::set" : [ "OOCSI" ],
+					"mo.send[1]::mute" : [ 0.0 ],
+					"mo.oocsi::status" : [ 1.0 ],
+					"mo.oocsi::mute" : [ 0.0 ],
+					"mo.oocsi::channel" : [ "testchannel" ],
+					"mo.oocsi::port" : [ 4444.0 ],
+					"mo.oocsi::host" : [ "oocsi.id.tue.nl" ],
+					"mo.oocsi::client" : [  ],
+					"mo.serial::port" : [ "wchusbserial58550221361" ],
+					"mo.serial::mute" : [ 0.0 ],
+					"mo.serial::baud" : [ "115200" ],
+					"mo.monitor::lines" : [ 1.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
