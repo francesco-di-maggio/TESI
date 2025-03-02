@@ -1,0 +1,4 @@
+2025-03-02 08:59:00,661 [34mINFO [0;39m play.api.http.HttpErrorHandlerExceptions - Registering exception handler: guice-provision-exception-handler
+2025-03-02 11:06:00,855 [34mINFO [0;39m play.api.http.HttpErrorHandlerExceptions - Registering exception handler: guice-provision-exception-handler
+2025-03-02 11:06:50,339 [34mINFO [0;39m play.api.http.HttpErrorHandlerExceptions - Registering exception handler: guice-provision-exception-handler
+2025-03-02 11:23:52,515 [34mINFO [0;39m play.api.http.HttpErrorHandlerExceptions - Registering exception handler: guice-provision-exception-handler

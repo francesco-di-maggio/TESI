@@ -54,7 +54,7 @@ void sendBattery() {
     lastSentBattery = batteryPercent;
     
     if (BATTERY.serial) {
-        sendSerial("Battery", batteryPercent);
+        sendSerial("BATTERY", batteryPercent);
     }
     if (BATTERY.osc) {
         sendOSC("/tesi/battery", batteryPercent);

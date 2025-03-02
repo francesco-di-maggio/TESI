@@ -14,6 +14,7 @@ void initSensors() {
     Wire.begin();
     Serial.println(F("Initializing I2C Communication"));
 
+    initLDR();
     initPOT();
     initBNO055();
     initMPR121();

@@ -26,7 +26,7 @@ extern SensorConfig BATTERY, LDR, MIC, POT, DISTANCE, QUAT, PUSH, CAP;
 // ----------------------
 // WiFi & OSC Configuration
 // ----------------------
-#define HOME_NETWORK // Comment this line if using WORK network
+#define A_NETWORK // Comment this line if using B network
 
 extern const char* SSID;
 extern const char* PASS;
@@ -45,7 +45,7 @@ extern OOCSI oocsi;
 // ----------------------
 // Pin Definitions
 // ----------------------
-#define COMMON_ANODE  // Comment if using a Common Cathode LED
+// #define COMMON_ANODE  // Comment if using a Common Cathode LED
 
 extern const int RED_PIN, GREEN_PIN, BLUE_PIN;
 extern const int BATTERY_PIN, LDR_PIN, MIC_PIN, POT_PIN, PUSH1_PIN, PUSH2_PIN;

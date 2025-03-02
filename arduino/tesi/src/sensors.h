@@ -28,9 +28,11 @@ extern Adafruit_MPR121 CAP_SENSOR;
 // Sensor Initialization Functions
 // ----------------------
 void initPOT();
+void initLDR();
 void initBNO055();
 void initMPR121();
 void initVL53L1X();
+
 void initSensors();
 
 #endif // SENSORS_H

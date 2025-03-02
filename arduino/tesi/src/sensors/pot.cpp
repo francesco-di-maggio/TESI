@@ -20,8 +20,8 @@ const float kalmanMeasurementNoise = 1.5f; // Lower = less jitter, Higher = more
 // MOVING_BLEND: blending factor used when a significant change is detected (faster response)
 // IDLE_BLEND: blending factor used when only small changes occur (more stability when idle)
 const int DEADZONE_THRESHOLD = 20;     // Higher = more stability, Lower = detects tiny changes
-const float MOVING_BLEND = 0.9f;       // Higher = reacts faster to movement
-const float IDLE_BLEND = 0.1f;         // Higher = steadier when idle
+const float MOVING_BLEND = 0.8f;       // Higher = reacts faster to movement
+const float IDLE_BLEND = 0.2f;         // Higher = steadier when idle
 
 static int lastStableValue = 0; // Stores the last valid (stable) value
 

@@ -4,15 +4,15 @@
 // -------------------------------------------------------------------------
 // Microphone Reading Constants
 // -------------------------------------------------------------------------
-const int SAMPLE_WINDOW = 50;         // Sample window in milliseconds (shorten this for quicker response or lengthen it for more smoothing)
-const int MIC_BASELINE = 200;         // Baseline offset (ADC units) for ambient noise (if the ambient level is higher, increase this value)
-const int MIC_CHANGE_THRESHOLD = 5;  // Minimum change in ADC units to trigger an update (Increase this to ignore even smaller fluctuations, or decrease for more sensitivity)
+const int SAMPLE_WINDOW = 70;         // Sample window in milliseconds (shorten this for quicker response or lengthen it for more smoothing)
+const int MIC_BASELINE = 400;         // Baseline offset (ADC units) for ambient noise (if the ambient level is higher, increase this value)
+const int MIC_CHANGE_THRESHOLD = 10;  // Minimum change in ADC units to trigger an update (Increase this to ignore even smaller fluctuations, or decrease for more sensitivity)
 
 // -------------------------------------------------------------------------
 // EMA Filtering Variable for MIC
 // -------------------------------------------------------------------------
 static int lastMicLevel = 0;          // Stores the last filtered mic level
-const float ALPHA = 0.8f;             // Blending factor for EMA (0<ALPHA<=1): higher => more responsive
+const float ALPHA = 0.7f;             // Blending factor for EMA (0<ALPHA<=1): higher => more responsive
 
 // -------------------------------------------------------------------------
 // readMIC()

@@ -8,13 +8,13 @@
 static float kalmanEstimate = 0.0f;       // Current filtered distance (mm)
 static float kalmanError = 1.0f;          // Estimate uncertainty
 // Tune these parameters for faster response vs. smoothness:
-const float kalmanProcessNoise = 0.02f;   // Increase for faster adaptation
-const float kalmanMeasurementNoise = 1.5f;  // Lower for more responsiveness
+const float kalmanProcessNoise = 0.02f;     // Increase for faster adaptation
+const float kalmanMeasurementNoise = 2.0f;  // Lower for more responsiveness
 
 // -------------------------------------------------------------------------
 // Adaptive Blending Parameters for VL53L1X
 // -------------------------------------------------------------------------
-const int DIST_DEADZONE = 3;             // Minimum raw difference (in mm) to trigger an update
+const int DIST_DEADZONE = 10;              // Minimum raw difference (in mm) to trigger an update
 const float DIST_MOVING_BLEND = 0.8f;      // Fast blend factor when a significant change occurs
 const float DIST_IDLE_BLEND = 0.2f;        // Slow blend factor when change is minor
 
@@ -111,12 +111,12 @@ void sendDistance() {
     lastSentDistance = distance;
     
     if (DISTANCE.serial) {
-        sendSerial("Distance", distance);
+        sendSerial("DISTANCE", distance);
     }
     if (DISTANCE.osc) {
         sendOSC("/tesi/distance", distance);
     }
     if (DISTANCE.oocsi) {
-        sendOOCSI(CHANNEL, "distance", distance);
+        sendOOCSI(CHANNEL, "/tesi/distance", distance);
     }
 }

@@ -7,3 +7,5 @@
 - modulo
 - modulo+
 - The Sadam Library
+- FluCoMa
+- odot

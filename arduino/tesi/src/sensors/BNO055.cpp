@@ -63,7 +63,7 @@ void sendQUAT() {
         firstRun = false;
         if (QUAT.serial) sendSerial("QUAT", quatValues, 4);
         if (QUAT.osc) sendOSC("/tesi/quat", quatValues, 4);
-        if (QUAT.oocsi) sendOOCSI(CHANNEL, "quat", quatValues, 4);
+        if (QUAT.oocsi) sendOOCSI(CHANNEL, "/tesi/quat", quatValues, 4);
         return;
     }
     
@@ -91,13 +91,7 @@ void sendQUAT() {
         lastSentQuat[i] = quatValues[i];
     }
     
-    if (QUAT.serial) {
-        sendSerial("QUAT", quatValues, 4);
-    }
-    if (QUAT.osc) {
-        sendOSC("/tesi/quat", quatValues, 4);
-    }
-    if (QUAT.oocsi) {
-        sendOOCSI(CHANNEL, "/tesi/quat", quatValues, 4);
-    }
+    if (QUAT.serial) sendSerial("QUAT", quatValues, 4);
+    if (QUAT.osc) sendOSC("/tesi/quat", quatValues, 4);
+    if (QUAT.oocsi) sendOOCSI(CHANNEL, "/tesi/quat", quatValues, 4);
 }

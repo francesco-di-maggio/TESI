@@ -1,0 +1,57 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET		/								controllers.Application.index(request: Request)
+GET		/ws								controllers.Application.ws()
+GET 	/metrics						controllers.Application.metrics(request: Request)
+GET 	/network.json					controllers.Application.netJson()
+GET 	/network						controllers.Application.network(request: Request)
+GET 	/subscribe/*id					controllers.Application.subscribe(request: Request, id: String)
+
+# Tools
+GET 	/tools							controllers.Tools.index(request: Request)
+GET 	/dashboard						controllers.Tools.dashboard(request: Request)
+GET 	/datatiles						controllers.Tools.datatiles(request: Request)
+GET 	/oocsimote						controllers.Tools.mote(request: Request)
+GET 	/oocsimote/share					controllers.Tools.moteShare(request: Request)
+GET 	/iotsim							controllers.Tools.iotsim(request: Request)
+GET 	/heyOOCSI						controllers.Tools.heyOOCSI(request: Request, route: String ?= "")
+GET 	/heyOOCSI/:route					controllers.Tools.heyOOCSI(request: Request, route: String)
+GET 	/datacanvas						controllers.Tools.datacanvas(request: Request, token : String ?= "")
+GET 	/datacanvas/:token				controllers.Tools.datacanvas(request: Request, token: String)
+GET 	/animoocsi						controllers.Tools.animate(request: Request)
+POST 	/generateMoteCode				controllers.Codegen.generateOOCSIMoteCode(request: Request)
+
+# Test
+GET 	/test/jotted					controllers.Tools.testJotted(request: Request)
+GET 	/test/raw						controllers.Tools.testRaw(request: Request)
+GET 	/test/visual					controllers.Tools.testVisual(request: Request)
+GET 	/test/server/clientRefresh		controllers.Tools.clientRefreshStats(request: Request)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               		controllers.Assets.versioned(path="/public", file: Asset)
+GET		/icons/*file					controllers.Assets.at(path="/public/images/icons", file)
+
+# REST API
+GET		/channels						controllers.Application.channels()
+GET 	/send/:channel/:data				controllers.Application.sendData(request: Request, channel: String, data: String)
+GET 	/sendAndClose/:channel/:data		controllers.Application.sendData(request: Request, channel: String, data: String)
+GET 	/track/:channel/:data			controllers.Application.track(request: Request, channel: String, data: String)
+POST	/send							controllers.Application.send(request: Request, channel: String ?= "")
+POST	/send/							controllers.Application.send(request: Request, channel: String ?= "")
+POST	/send/:channel					controllers.Application.send(request: Request, channel)
+
+#tutorial pages
+GET 	/tutorials						controllers.Tutorial.index()
+GET 	/tutorials/						controllers.Tutorial.index()
+GET 	/tutorials/paint-the-canvas		controllers.Tutorial.paint_the_canvas()
+
+
+# services with least priority
+GET 	/:service						controllers.Application.serviceIndex(service)
+GET 	/:service/						controllers.Application.serviceIndex(service)
+GET		/:service/:call					controllers.Application.serviceCall(service, call, data: String ?= "")
+GET		/:service/:call/:data			controllers.Application.serviceCall(service, call, data)
+POST	/:service/:call					controllers.Application.serviceCallPost(request: Request, service, call)
