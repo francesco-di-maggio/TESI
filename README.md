@@ -28,6 +28,7 @@ TESI is a modular, wireless, and networked interface, leveraging machine learnin
 * arduino/ – ESP32 firmware for sensor data collection and communication.
 * kicad/ – Open-source KiCad schematics and PCB layouts.
 * max/ – Max/MSP patches for data processing, mapping, and control.
+* oocsi/ - OOCSI local server.
 
 ## Setup & Installation
 1. Flash the ESP32 with Arduino
@@ -42,10 +43,11 @@ TESI is a modular, wireless, and networked interface, leveraging machine learnin
 
 ### Dependencies
 To work in Max, TESI requires external libraries including:
-* (FluCoMa)[https://www.flucoma.org/]
 * (modulo)[https://cycling74.com/packages/modulo]
+* (modulo-plus)[https://github.com/francesco-di-maggio/modulo-plus]
 * (odot)[https://cycling74.com/packages/odot]
 * (Sadam Library)[https://cycling74.com/packages/sadam-library]
+* (FluCoMa)[https://www.flucoma.org/]
 
 ### Networked Interaction & Distributed Control
 TESI operates as part of a system of interconnected objects, using OOCSI for decentralized communication between multiple devices. This enables:
