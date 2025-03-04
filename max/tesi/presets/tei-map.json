@@ -5,151 +5,124 @@
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"mo.noteout::port" : [ 3 ],
-					"mo.noteout::channel" : [ 1.0 ],
-					"mo.noteout::note" : [ 60.0 ],
-					"mo.noteout::mute" : [ 0.0 ],
-					"mo.noteout[1]::port" : [ 3 ],
-					"mo.noteout[1]::channel" : [ 2.0 ],
-					"mo.noteout[1]::note" : [ 60.0 ],
-					"mo.noteout[1]::mute" : [ 0.0 ],
-					"mo.noteout[2]::port" : [ 3 ],
-					"mo.noteout[2]::channel" : [ 3.0 ],
-					"mo.noteout[2]::note" : [ 60.0 ],
-					"mo.noteout[2]::mute" : [ 0.0 ],
-					"mo.noteout[3]::port" : [ 3 ],
-					"mo.noteout[3]::channel" : [ 4.0 ],
-					"mo.noteout[3]::note" : [ 60.0 ],
-					"mo.noteout[3]::mute" : [ 0.0 ],
-					"mo.noteout[5]::port" : [ 3 ],
-					"mo.noteout[5]::channel" : [ 5.0 ],
-					"mo.noteout[5]::note" : [ 60.0 ],
-					"mo.noteout[5]::mute" : [ 0.0 ],
-					"mo.noteout[4]::port" : [ 3 ],
-					"mo.noteout[4]::channel" : [ 6.0 ],
-					"mo.noteout[4]::note" : [ 60.0 ],
-					"mo.noteout[4]::mute" : [ 0.0 ],
-					"mo.noteout[7]::port" : [ 3 ],
-					"mo.noteout[7]::channel" : [ 7.0 ],
-					"mo.noteout[7]::note" : [ 60.0 ],
-					"mo.noteout[7]::mute" : [ 0.0 ],
-					"mo.noteout[6]::port" : [ 3 ],
-					"mo.noteout[6]::channel" : [ 8.0 ],
-					"mo.noteout[6]::note" : [ 60.0 ],
-					"mo.noteout[6]::mute" : [ 0.0 ],
-					"mo.noteout[9]::mute" : [ 0.0 ],
-					"mo.noteout[9]::port" : [ 3 ],
-					"mo.noteout[9]::note" : [ 60.0 ],
-					"mo.noteout[9]::channel" : [ 1.0 ],
-					"mo.noteout[8]::port" : [ 3 ],
-					"mo.noteout[8]::note" : [ 60.0 ],
-					"mo.noteout[8]::channel" : [ 1.0 ],
-					"mo.noteout[8]::mute" : [ 0.0 ],
-					"mo.ctlouts::[1]::port" : [ 3 ],
-					"mo.ctlouts::[1]::mute" : [ 0.0 ],
-					"mo.ctlouts::[1]::CC" : [ 1.0 ],
-					"mo.ctlouts::[1]::channel" : [ 1.0 ],
-					"mo.ctlouts::[2]::CC" : [ 2.0 ],
-					"mo.ctlouts::[2]::channel" : [ 1.0 ],
-					"mo.ctlouts::[2]::port" : [ 3 ],
-					"mo.ctlouts::[2]::mute" : [ 0.0 ],
-					"mo.ctlouts::[3]::channel" : [ 1.0 ],
-					"mo.ctlouts::[3]::port" : [ 3 ],
-					"mo.ctlouts::[3]::mute" : [ 0.0 ],
-					"mo.ctlouts::[3]::CC" : [ 3.0 ],
-					"mo.ctlouts::[4]::channel" : [ 1.0 ],
-					"mo.ctlouts::[4]::port" : [ 3 ],
-					"mo.ctlouts::[4]::mute" : [ 0.0 ],
-					"mo.ctlouts::[4]::CC" : [ 4.0 ],
-					"mo.ctlouts::[5]::mute" : [ 0.0 ],
-					"mo.ctlouts::[5]::port" : [ 3 ],
-					"mo.ctlouts::[5]::CC" : [ 5.0 ],
-					"mo.ctlouts::[5]::channel" : [ 1.0 ],
-					"mo.ctlouts::[6]::CC" : [ 6.0 ],
-					"mo.ctlouts::[6]::channel" : [ 1.0 ],
-					"mo.ctlouts::[6]::port" : [ 3 ],
-					"mo.ctlouts::[6]::mute" : [ 0.0 ],
-					"mo.ctlouts::[7]::channel" : [ 1.0 ],
-					"mo.ctlouts::[7]::port" : [ 3 ],
-					"mo.ctlouts::[7]::mute" : [ 0.0 ],
-					"mo.ctlouts::[7]::CC" : [ 7.0 ],
-					"mo.ctlouts::[8]::port" : [ 3 ],
-					"mo.ctlouts::[8]::mute" : [ 0.0 ],
-					"mo.ctlouts::[8]::CC" : [ 8.0 ],
-					"mo.ctlouts::[8]::channel" : [ 1.0 ],
-					"mo.ctlouts::port" : [ 3 ],
-					"mo.ctlouts::voices" : [ 8.0 ],
-					"mo.ctlouts::mute" : [ 0.0 ],
-					"mo.ctlouts::channel" : [ 1.0 ],
-					"mo.speedlim::rate" : [ 30.0 ],
-					"note" : [ 						{
+					"control" : [ 						{
 							"data" : 							{
 								"numins" : 10,
-								"numouts" : 10,
-								"connections" : [ 									{
-										"in" : 0,
-										"out" : 0,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 1,
-										"out" : 1,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 2,
-										"out" : 2,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 3,
-										"out" : 3,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 4,
-										"out" : 4,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 5,
-										"out" : 5,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 6,
-										"out" : 6,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 7,
-										"out" : 7,
-										"gain" : 1.0
-									}
- ]
+								"numouts" : 10
 							}
 
 						}
  ],
-					"control" : [ 						{
+					"control[1]" : [ 						{
 							"data" : 							{
-								"numins" : 8,
-								"numouts" : 8,
-								"connections" : [ 									{
-										"in" : 7,
-										"out" : 0,
-										"gain" : 1.0
-									}
-, 									{
-										"in" : 4,
-										"out" : 1,
-										"gain" : 1.0
-									}
- ]
+								"numins" : 5,
+								"numouts" : 10
 							}
 
 						}
- ]
+ ],
+					"mo.speedlim::rate" : [ 30.0 ],
+					"mo.ctlouts::channel" : [ 1.0 ],
+					"mo.ctlouts::voices" : [ 10.0 ],
+					"mo.ctlouts::port" : [ 4 ],
+					"mo.ctlouts::mute" : [ 0.0 ],
+					"mo.ctlouts::[1]::port" : [ 4 ],
+					"mo.ctlouts::[1]::channel" : [ 1.0 ],
+					"mo.ctlouts::[1]::CC" : [ 1.0 ],
+					"mo.ctlouts::[1]::mute" : [ 0.0 ],
+					"mo.ctlouts::[2]::port" : [ 4 ],
+					"mo.ctlouts::[2]::channel" : [ 1.0 ],
+					"mo.ctlouts::[2]::CC" : [ 2.0 ],
+					"mo.ctlouts::[2]::mute" : [ 0.0 ],
+					"mo.ctlouts::[3]::port" : [ 4 ],
+					"mo.ctlouts::[3]::channel" : [ 1.0 ],
+					"mo.ctlouts::[3]::CC" : [ 3.0 ],
+					"mo.ctlouts::[3]::mute" : [ 0.0 ],
+					"mo.ctlouts::[4]::port" : [ 4 ],
+					"mo.ctlouts::[4]::channel" : [ 1.0 ],
+					"mo.ctlouts::[4]::CC" : [ 4.0 ],
+					"mo.ctlouts::[4]::mute" : [ 0.0 ],
+					"mo.ctlouts::[5]::port" : [ 4 ],
+					"mo.ctlouts::[5]::channel" : [ 1.0 ],
+					"mo.ctlouts::[5]::CC" : [ 5.0 ],
+					"mo.ctlouts::[5]::mute" : [ 0.0 ],
+					"mo.ctlouts::[6]::port" : [ 4 ],
+					"mo.ctlouts::[6]::channel" : [ 1.0 ],
+					"mo.ctlouts::[6]::CC" : [ 6.0 ],
+					"mo.ctlouts::[6]::mute" : [ 0.0 ],
+					"mo.ctlouts::[7]::port" : [ 4 ],
+					"mo.ctlouts::[7]::channel" : [ 1.0 ],
+					"mo.ctlouts::[7]::CC" : [ 7.0 ],
+					"mo.ctlouts::[7]::mute" : [ 0.0 ],
+					"mo.ctlouts::[8]::port" : [ 4 ],
+					"mo.ctlouts::[8]::channel" : [ 1.0 ],
+					"mo.ctlouts::[8]::CC" : [ 8.0 ],
+					"mo.ctlouts::[8]::mute" : [ 0.0 ],
+					"mo.ctlouts::[9]::port" : [ 1 ],
+					"mo.ctlouts::[9]::channel" : [ 1.0 ],
+					"mo.ctlouts::[9]::CC" : [ 9.0 ],
+					"mo.ctlouts::[9]::mute" : [ 0.0 ],
+					"mo.ctlouts::[10]::port" : [ 1 ],
+					"mo.ctlouts::[10]::channel" : [ 1.0 ],
+					"mo.ctlouts::[10]::CC" : [ 10.0 ],
+					"mo.ctlouts::[10]::mute" : [ 0.0 ],
+					"mo.noteouts::channel" : [ 1.0 ],
+					"mo.noteouts::voices" : [ 8.0 ],
+					"mo.noteouts::port" : [ 4 ],
+					"mo.noteouts::[1]::port" : [ 4 ],
+					"mo.noteouts::[1]::channel" : [ 1.0 ],
+					"mo.noteouts::[1]::note" : [ 60.0 ],
+					"mo.noteouts::[1]::mute" : [ 0.0 ],
+					"mo.noteouts::[2]::port" : [ 4 ],
+					"mo.noteouts::[2]::channel" : [ 2.0 ],
+					"mo.noteouts::[2]::note" : [ 60.0 ],
+					"mo.noteouts::[2]::mute" : [ 0.0 ],
+					"mo.noteouts::[3]::port" : [ 4 ],
+					"mo.noteouts::[3]::channel" : [ 3.0 ],
+					"mo.noteouts::[3]::note" : [ 60.0 ],
+					"mo.noteouts::[3]::mute" : [ 0.0 ],
+					"mo.noteouts::[4]::port" : [ 4 ],
+					"mo.noteouts::[4]::channel" : [ 4.0 ],
+					"mo.noteouts::[4]::note" : [ 60.0 ],
+					"mo.noteouts::[4]::mute" : [ 0.0 ],
+					"mo.noteouts::[5]::port" : [ 4 ],
+					"mo.noteouts::[5]::channel" : [ 5.0 ],
+					"mo.noteouts::[5]::note" : [ 60.0 ],
+					"mo.noteouts::[5]::mute" : [ 0.0 ],
+					"mo.noteouts::[6]::port" : [ 4 ],
+					"mo.noteouts::[6]::channel" : [ 6.0 ],
+					"mo.noteouts::[6]::note" : [ 60.0 ],
+					"mo.noteouts::[6]::mute" : [ 0.0 ],
+					"mo.noteouts::[7]::port" : [ 4 ],
+					"mo.noteouts::[7]::channel" : [ 7.0 ],
+					"mo.noteouts::[7]::note" : [ 60.0 ],
+					"mo.noteouts::[7]::mute" : [ 0.0 ],
+					"mo.noteouts::[8]::port" : [ 4 ],
+					"mo.noteouts::[8]::channel" : [ 8.0 ],
+					"mo.noteouts::[8]::note" : [ 60.0 ],
+					"mo.noteouts::[8]::mute" : [ 0.0 ],
+					"mo.htab::voices" : [ 5.0 ],
+					"mo.htab::mode" : [ 0.0 ],
+					"mo.htab::tab" : [ 0 ],
+					"mo.htab::mute" : [ 0.0 ],
+					"mo.pads::voices" : [ 8.0 ],
+					"mo.pads::mute" : [ 0.0 ],
+					"mo.pads::[1]::mode" : [ 0.0 ],
+					"mo.pads::[1]::pad" : [ 0.0 ],
+					"mo.pads::[2]::mode" : [ 0.0 ],
+					"mo.pads::[2]::pad" : [ 0.0 ],
+					"mo.pads::[3]::mode" : [ 0.0 ],
+					"mo.pads::[3]::pad" : [ 0.0 ],
+					"mo.pads::[4]::mode" : [ 0.0 ],
+					"mo.pads::[4]::pad" : [ 0.0 ],
+					"mo.pads::[5]::mode" : [ 0.0 ],
+					"mo.pads::[5]::pad" : [ 0.0 ],
+					"mo.pads::[6]::mode" : [ 0.0 ],
+					"mo.pads::[6]::pad" : [ 0.0 ],
+					"mo.pads::[7]::mode" : [ 0.0 ],
+					"mo.pads::[7]::pad" : [ 0.0 ],
+					"mo.pads::[8]::mode" : [ 0.0 ],
+					"mo.pads::[8]::pad" : [ 0.0 ]
 				}
 
 			}
