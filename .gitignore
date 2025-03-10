@@ -43,3 +43,6 @@ Icon?
 # *.asd
 # *.cfg
 # *.backup
+
+# OOCSI
+*.log
