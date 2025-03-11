@@ -1,28 +1,20 @@
 {
 	"pattrstorage" : 	{
-		"name" : "tei-receive",
+		"name" : "tesi-receive",
 		"slots" : 		{
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"mo.udpreceive::port" : [ "8001" ],
-					"mo.udpreceive::mute" : [ 0.0 ],
-					"mo.send::set" : [ "OSC-8001" ],
+					"mo.send::set" : [ "OSC-1" ],
 					"mo.send::mute" : [ 0.0 ],
 					"mo.send[1]::set" : [ "OOCSI-1" ],
 					"mo.send[1]::mute" : [ 0.0 ],
-					"mo.monitor[1]::lines" : [ 14.0 ],
-					"mo.monitor[2]::lines" : [ 14.0 ],
 					"mo.oocsi::client" : [ "fromMax1-####" ],
 					"mo.oocsi::mute" : [ 0.0 ],
 					"mo.oocsi::channel" : [ "tesichannel" ],
 					"mo.oocsi::port" : [ 4444.0 ],
 					"mo.oocsi::host" : [ "oocsi.id.tue.nl" ],
 					"mo.oocsi::status" : [ 0.0 ],
-					"mo.serial::port" : [ "debug-console" ],
-					"mo.serial::mute" : [ 0.0 ],
-					"mo.serial::baud" : [ "115200" ],
-					"mo.monitor::lines" : [ 14.0 ],
 					"mo.send[2]::set" : [ "OOCSI-2" ],
 					"mo.send[2]::mute" : [ 0.0 ],
 					"mo.send[3]::set" : [ "OOCSI-3" ],
@@ -30,7 +22,17 @@
 					"mo.send[5]::set" : [ "OOCSI-4" ],
 					"mo.send[5]::mute" : [ 0.0 ],
 					"mo.send[4]::set" : [ "OOCSI-5" ],
-					"mo.send[4]::mute" : [ 0.0 ]
+					"mo.send[4]::mute" : [ 0.0 ],
+					"mo.udpreceive::port" : [ "8001" ],
+					"mo.udpreceive::mute" : [ 0.0 ],
+					"mo.send[9]::set" : [ "OSC-2" ],
+					"mo.send[9]::mute" : [ 0.0 ],
+					"mo.send[8]::set" : [ "OSC-3" ],
+					"mo.send[8]::mute" : [ 0.0 ],
+					"mo.send[7]::set" : [ "OSC-4" ],
+					"mo.send[7]::mute" : [ 0.0 ],
+					"mo.send[6]::set" : [ "OSC-5" ],
+					"mo.send[6]::mute" : [ 0.0 ]
 				}
 
 			}
@@ -38,24 +40,16 @@
 			"2" : 			{
 				"id" : 2,
 				"data" : 				{
-					"mo.udpreceive::port" : [ "8001" ],
-					"mo.udpreceive::mute" : [ 0.0 ],
-					"mo.send::set" : [ "OSC-8001" ],
+					"mo.send::set" : [ "OSC-1" ],
 					"mo.send::mute" : [ 0.0 ],
 					"mo.send[1]::set" : [ "OOCSI-1" ],
 					"mo.send[1]::mute" : [ 0.0 ],
-					"mo.monitor[1]::lines" : [ 14.0 ],
-					"mo.monitor[2]::lines" : [ 14.0 ],
 					"mo.oocsi::client" : [ "fromMax1-####" ],
 					"mo.oocsi::mute" : [ 0.0 ],
 					"mo.oocsi::channel" : [ "tesichannel" ],
 					"mo.oocsi::port" : [ 4444.0 ],
 					"mo.oocsi::host" : [ "192.168.8.100" ],
 					"mo.oocsi::status" : [ 0.0 ],
-					"mo.serial::port" : [ "debug-console" ],
-					"mo.serial::mute" : [ 0.0 ],
-					"mo.serial::baud" : [ "115200" ],
-					"mo.monitor::lines" : [ 14.0 ],
 					"mo.send[2]::set" : [ "OOCSI-2" ],
 					"mo.send[2]::mute" : [ 0.0 ],
 					"mo.send[3]::set" : [ "OOCSI-3" ],
@@ -63,7 +57,17 @@
 					"mo.send[5]::set" : [ "OOCSI-4" ],
 					"mo.send[5]::mute" : [ 0.0 ],
 					"mo.send[4]::set" : [ "OOCSI-5" ],
-					"mo.send[4]::mute" : [ 0.0 ]
+					"mo.send[4]::mute" : [ 0.0 ],
+					"mo.udpreceive::port" : [ "8001" ],
+					"mo.udpreceive::mute" : [ 0.0 ],
+					"mo.send[9]::set" : [ "OSC-2" ],
+					"mo.send[9]::mute" : [ 0.0 ],
+					"mo.send[8]::set" : [ "OSC-3" ],
+					"mo.send[8]::mute" : [ 0.0 ],
+					"mo.send[7]::set" : [ "OSC-4" ],
+					"mo.send[7]::mute" : [ 0.0 ],
+					"mo.send[6]::set" : [ "OSC-5" ],
+					"mo.send[6]::mute" : [ 0.0 ]
 				}
 
 			}

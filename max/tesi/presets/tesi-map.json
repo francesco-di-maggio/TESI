@@ -1,0 +1,379 @@
+{
+	"pattrstorage" : 	{
+		"name" : "tesi-map",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"mo.speedlim::rate" : [ 30.0 ],
+					"mo.ctlouts::channel" : [ 1.0 ],
+					"mo.ctlouts::voices" : [ 10.0 ],
+					"mo.ctlouts::port" : [ 3 ],
+					"mo.ctlouts::mute" : [ 0.0 ],
+					"mo.ctlouts::[1]::port" : [ 3 ],
+					"mo.ctlouts::[1]::channel" : [ 1.0 ],
+					"mo.ctlouts::[1]::CC" : [ 1.0 ],
+					"mo.ctlouts::[1]::mute" : [ 0.0 ],
+					"mo.ctlouts::[2]::port" : [ 3 ],
+					"mo.ctlouts::[2]::channel" : [ 1.0 ],
+					"mo.ctlouts::[2]::CC" : [ 2.0 ],
+					"mo.ctlouts::[2]::mute" : [ 0.0 ],
+					"mo.ctlouts::[3]::port" : [ 3 ],
+					"mo.ctlouts::[3]::channel" : [ 1.0 ],
+					"mo.ctlouts::[3]::CC" : [ 3.0 ],
+					"mo.ctlouts::[3]::mute" : [ 0.0 ],
+					"mo.ctlouts::[4]::port" : [ 3 ],
+					"mo.ctlouts::[4]::channel" : [ 1.0 ],
+					"mo.ctlouts::[4]::CC" : [ 4.0 ],
+					"mo.ctlouts::[4]::mute" : [ 0.0 ],
+					"mo.ctlouts::[5]::port" : [ 3 ],
+					"mo.ctlouts::[5]::channel" : [ 1.0 ],
+					"mo.ctlouts::[5]::CC" : [ 5.0 ],
+					"mo.ctlouts::[5]::mute" : [ 0.0 ],
+					"mo.ctlouts::[6]::port" : [ 3 ],
+					"mo.ctlouts::[6]::channel" : [ 1.0 ],
+					"mo.ctlouts::[6]::CC" : [ 6.0 ],
+					"mo.ctlouts::[6]::mute" : [ 0.0 ],
+					"mo.ctlouts::[7]::port" : [ 3 ],
+					"mo.ctlouts::[7]::channel" : [ 1.0 ],
+					"mo.ctlouts::[7]::CC" : [ 7.0 ],
+					"mo.ctlouts::[7]::mute" : [ 0.0 ],
+					"mo.ctlouts::[8]::port" : [ 3 ],
+					"mo.ctlouts::[8]::channel" : [ 1.0 ],
+					"mo.ctlouts::[8]::CC" : [ 8.0 ],
+					"mo.ctlouts::[8]::mute" : [ 0.0 ],
+					"mo.ctlouts::[9]::port" : [ 3 ],
+					"mo.ctlouts::[9]::channel" : [ 1.0 ],
+					"mo.ctlouts::[9]::CC" : [ 9.0 ],
+					"mo.ctlouts::[9]::mute" : [ 0.0 ],
+					"mo.ctlouts::[10]::port" : [ 3 ],
+					"mo.ctlouts::[10]::channel" : [ 1.0 ],
+					"mo.ctlouts::[10]::CC" : [ 10.0 ],
+					"mo.ctlouts::[10]::mute" : [ 0.0 ],
+					"mo.noteouts::channel" : [ 1.0 ],
+					"mo.noteouts::voices" : [ 8.0 ],
+					"mo.noteouts::port" : [ 3 ],
+					"mo.noteouts::[1]::port" : [ 3 ],
+					"mo.noteouts::[1]::channel" : [ 1.0 ],
+					"mo.noteouts::[1]::note" : [ 60.0 ],
+					"mo.noteouts::[1]::mute" : [ 0.0 ],
+					"mo.noteouts::[2]::port" : [ 3 ],
+					"mo.noteouts::[2]::channel" : [ 2.0 ],
+					"mo.noteouts::[2]::note" : [ 60.0 ],
+					"mo.noteouts::[2]::mute" : [ 0.0 ],
+					"mo.noteouts::[3]::port" : [ 3 ],
+					"mo.noteouts::[3]::channel" : [ 3.0 ],
+					"mo.noteouts::[3]::note" : [ 60.0 ],
+					"mo.noteouts::[3]::mute" : [ 0.0 ],
+					"mo.noteouts::[4]::port" : [ 3 ],
+					"mo.noteouts::[4]::channel" : [ 4.0 ],
+					"mo.noteouts::[4]::note" : [ 60.0 ],
+					"mo.noteouts::[4]::mute" : [ 0.0 ],
+					"mo.noteouts::[5]::port" : [ 3 ],
+					"mo.noteouts::[5]::channel" : [ 5.0 ],
+					"mo.noteouts::[5]::note" : [ 60.0 ],
+					"mo.noteouts::[5]::mute" : [ 0.0 ],
+					"mo.noteouts::[6]::port" : [ 3 ],
+					"mo.noteouts::[6]::channel" : [ 6.0 ],
+					"mo.noteouts::[6]::note" : [ 60.0 ],
+					"mo.noteouts::[6]::mute" : [ 0.0 ],
+					"mo.noteouts::[7]::port" : [ 3 ],
+					"mo.noteouts::[7]::channel" : [ 7.0 ],
+					"mo.noteouts::[7]::note" : [ 60.0 ],
+					"mo.noteouts::[7]::mute" : [ 0.0 ],
+					"mo.noteouts::[8]::port" : [ 3 ],
+					"mo.noteouts::[8]::channel" : [ 8.0 ],
+					"mo.noteouts::[8]::note" : [ 60.0 ],
+					"mo.noteouts::[8]::mute" : [ 0.0 ],
+					"mo.pads::voices" : [ 8.0 ],
+					"mo.pads::mute" : [ 0.0 ],
+					"mo.pads::[1]::mode" : [ 0.0 ],
+					"mo.pads::[1]::pad" : [ 0.0 ],
+					"mo.pads::[2]::mode" : [ 0.0 ],
+					"mo.pads::[2]::pad" : [ 0.0 ],
+					"mo.pads::[3]::mode" : [ 0.0 ],
+					"mo.pads::[3]::pad" : [ 0.0 ],
+					"mo.pads::[4]::mode" : [ 0.0 ],
+					"mo.pads::[4]::pad" : [ 0.0 ],
+					"mo.pads::[5]::mode" : [ 0.0 ],
+					"mo.pads::[5]::pad" : [ 0.0 ],
+					"mo.pads::[6]::mode" : [ 0.0 ],
+					"mo.pads::[6]::pad" : [ 0.0 ],
+					"mo.pads::[7]::mode" : [ 0.0 ],
+					"mo.pads::[7]::pad" : [ 0.0 ],
+					"mo.pads::[8]::mode" : [ 0.0 ],
+					"mo.pads::[8]::pad" : [ 0.0 ],
+					"control::ins" : [ 10.0 ],
+					"control::outs" : [ 10.0 ],
+					"control::connect" : [ 1.0 ],
+					"control::mute" : [ 0.0 ],
+					"control::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 10,
+								"numouts" : 10,
+								"connections" : [ 									{
+										"in" : 0,
+										"out" : 0,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 1,
+										"out" : 1,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 2,
+										"out" : 2,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 3,
+										"out" : 3,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 4,
+										"out" : 4,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 5,
+										"out" : 5,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 6,
+										"out" : 6,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 7,
+										"out" : 7,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 8,
+										"out" : 8,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 9,
+										"out" : 9,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ],
+					"control[1]::ins" : [ 5.0 ],
+					"control[1]::outs" : [ 10.0 ],
+					"control[1]::connect" : [ 0.0 ],
+					"control[1]::mute" : [ 0.0 ],
+					"control[1]::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 5,
+								"numouts" : 10,
+								"connections" : [ 									{
+										"in" : 0,
+										"out" : 0,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 1,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 2,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 3,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 4,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 5,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 6,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 7,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 8,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 9,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ],
+					"mo.sliders::voices" : [ 10.0 ],
+					"mo.sliders::polarity" : [ 0.0 ],
+					"mo.sliders::mute" : [ 0.0 ],
+					"mo.sliders::[1]::mute" : [ 0.0 ],
+					"mo.sliders::[1]::polarity" : [ 0.0 ],
+					"mo.sliders::[1]::slider" : [ 0.0 ],
+					"mo.sliders::[2]::mute" : [ 0.0 ],
+					"mo.sliders::[2]::polarity" : [ 0.0 ],
+					"mo.sliders::[2]::slider" : [ 0.0 ],
+					"mo.sliders::[3]::mute" : [ 0.0 ],
+					"mo.sliders::[3]::polarity" : [ 0.0 ],
+					"mo.sliders::[3]::slider" : [ 0.0 ],
+					"mo.sliders::[4]::mute" : [ 0.0 ],
+					"mo.sliders::[4]::polarity" : [ 0.0 ],
+					"mo.sliders::[4]::slider" : [ 0.0 ],
+					"mo.sliders::[5]::mute" : [ 0.0 ],
+					"mo.sliders::[5]::polarity" : [ 0.0 ],
+					"mo.sliders::[5]::slider" : [ 0.0 ],
+					"mo.sliders::[6]::mute" : [ 0.0 ],
+					"mo.sliders::[6]::polarity" : [ 0.0 ],
+					"mo.sliders::[6]::slider" : [ 0.0 ],
+					"mo.sliders::[7]::mute" : [ 0.0 ],
+					"mo.sliders::[7]::polarity" : [ 0.0 ],
+					"mo.sliders::[7]::slider" : [ 0.0 ],
+					"mo.sliders::[8]::mute" : [ 0.0 ],
+					"mo.sliders::[8]::polarity" : [ 0.0 ],
+					"mo.sliders::[8]::slider" : [ 0.0 ],
+					"mo.sliders::[9]::mute" : [ 0.0 ],
+					"mo.sliders::[9]::polarity" : [ 0.0 ],
+					"mo.sliders::[9]::slider" : [ 0.0 ],
+					"mo.sliders::[10]::mute" : [ 0.0 ],
+					"mo.sliders::[10]::polarity" : [ 0.0 ],
+					"mo.sliders::[10]::slider" : [ 0.0 ],
+					"control[3]::ins" : [ 8.0 ],
+					"control[3]::outs" : [ 8.0 ],
+					"control[3]::connect" : [ 1.0 ],
+					"control[3]::mute" : [ 0.0 ],
+					"control[3]::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 8,
+								"numouts" : 8,
+								"connections" : [ 									{
+										"in" : 0,
+										"out" : 0,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 1,
+										"out" : 1,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 2,
+										"out" : 2,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 3,
+										"out" : 3,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 4,
+										"out" : 4,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 5,
+										"out" : 5,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 6,
+										"out" : 6,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 7,
+										"out" : 7,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ],
+					"control[2]::ins" : [ 5.0 ],
+					"control[2]::outs" : [ 8.0 ],
+					"control[2]::connect" : [ 0.0 ],
+					"control[2]::mute" : [ 0.0 ],
+					"control[2]::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 5,
+								"numouts" : 8,
+								"connections" : [ 									{
+										"in" : 0,
+										"out" : 0,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 1,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 2,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 3,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 4,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 5,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 6,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 0,
+										"out" : 7,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
