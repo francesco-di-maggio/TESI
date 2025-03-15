@@ -26,7 +26,10 @@ extern SensorConfig BATTERY, LDR, MIC, POT, DISTANCE, QUAT, PUSH, CAP;
 // ----------------------
 // WiFi & OSC Configuration
 // ----------------------
-#define A_NETWORK // Comment this line if using B network
+// Uncomment **one** of the following lines to select a network:
+// #define LOCAL_NETWORK
+// #define WORK_NETWORK
+#define HOME_NETWORK
 
 extern const char* SSID;
 extern const char* PASS;

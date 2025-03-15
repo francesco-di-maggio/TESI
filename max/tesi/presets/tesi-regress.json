@@ -34,7 +34,7 @@
 					"mo.sliders::[8]::slider" : [ 0.0 ],
 					"mo.regress::run" : [ 0.0 ],
 					"mo.regress::rate" : [ 30.0 ],
-					"mo.regress::examples" : [ 1.0 ],
+					"mo.regress::examples" : [ 20.0 ],
 					"mo.regress::threshold" : [ 1.0 ],
 					"mo.regress::mute" : [ 0.0 ],
 					"mo.speedlim::rate" : [ 30.0 ],

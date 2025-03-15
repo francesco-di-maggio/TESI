@@ -15,24 +15,36 @@ SensorConfig CAP      = {1, 0, 0, 1, 10};
 // -------------------------------------------------------------------------
 // WiFi & OSC Configuration
 // -------------------------------------------------------------------------
-#ifdef A_NETWORK
+#ifdef LOCAL_NETWORK
 const char* SSID = "TESI2025";
 const char* PASS = "happypatching";
+const char* HOSTSERVER = "192.168.8.100";
 const IPAddress OUT_IP(192, 168, 8, 100);
-#else
+
+#elif defined(WORK_NETWORK)
 const char* SSID = "iotroam";
 const char* PASS = "tesi_1_1234";
+const char* HOSTSERVER = "oocsi.id.tue.nl";
 const IPAddress OUT_IP(145, 116, 46, 72);
+
+#elif defined(HOME_NETWORK)
+const char* SSID = "TSOST";
+const char* PASS = "GW-1705253";
+const char* HOSTSERVER = "oocsi.id.tue.nl";
+const IPAddress OUT_IP(192, 168, 2, 171);
+
+#else
+#error "No network defined! Please define LOCAL_NETWORK, WORK_NETWORK, or HOME_NETWORK."
 #endif
 
-const unsigned int OUT_PORT = 8005; // Pair with OOCSIName index.
+
+const unsigned int OUT_PORT = 8001; // Pair with OOCSIName index.
 WiFiUDP UDP;
 
 // -------------------------------------------------------------------------
 // OOCSI Configuration
 // -------------------------------------------------------------------------
-const char* OOCSIName = "tesi_5_####"; // Pair index with OUT_PORT number.
-const char* HOSTSERVER = "192.168.8.100";
+const char* OOCSIName = "tesi_1_####";
 // const char* HOSTSERVER = "oocsi.id.tue.nl";
 const char* CHANNEL = "tesichannel";
 OOCSI oocsi;  // Define the OOCSI object
