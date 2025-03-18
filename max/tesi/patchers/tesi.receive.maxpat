@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 928.0, 310.0, 318.0, 409.0 ],
+		"rect" : [ 352.0, 223.0, 318.0, 409.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -112,7 +112,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-68",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -125,7 +125,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-69",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -215,7 +215,9 @@
 
 			}
  ],
-		"originid" : "pat-4736"
+		"originid" : "pat-2354",
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }
