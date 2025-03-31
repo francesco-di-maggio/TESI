@@ -62,5 +62,4 @@ void loop() {
   // Use the check() function if you also need to process incoming messages
   // oocsi.check();
   oocsi.keepAlive(); 
-  // delay(10);
 }

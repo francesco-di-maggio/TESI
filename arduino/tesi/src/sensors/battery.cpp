@@ -45,21 +45,25 @@ int readBattery() {
 // Sends the battery percentage via Serial, OSC, and OOCSI only if the new
 // filtered value differs from the last sent value.
 void sendBattery() {
-    static int lastSentBattery = -1;  // Tracks the last sent battery percentage
-    int batteryPercent = readBattery();
+    static int lastSentValue = -1;  // Tracks the last sent battery percentage
+    int value = readBattery();
     
-    if (batteryPercent == lastSentBattery) {
+    if (value == lastSentValue) {
         return; // No change detected; do not send
     }
-    lastSentBattery = batteryPercent;
+    lastSentValue = value;
     
+    // Build the address string
+    char address[20];
+    snprintf(address, sizeof(address), "/battery");
+
     if (BATTERY.serial) {
-        sendSerial("BATTERY", batteryPercent);
+        sendSerial(address, value);
     }
     if (BATTERY.osc) {
-        sendOSC("/tesi/battery", batteryPercent);
+        sendOSC(address, value);
     }
     if (BATTERY.oocsi) {
-        sendOOCSI(CHANNEL, "/tesi/battery", batteryPercent);
+        sendOOCSI(CHANNEL, address, value);
     }
 }

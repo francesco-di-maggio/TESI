@@ -57,19 +57,22 @@ int readMIC() {
 // Sends the filtered microphone level via Serial, OSC, and OOCSI only if the value has
 // changed by at least MIC_CHANGE_THRESHOLD since the last transmission.
 void sendMIC() {
-    static int lastSentMic = -1;  // Stores the last sent mic level
-    int micValue = readMIC();
+    static int lastSentValue = -1;  // Stores the last sent mic level
+    int value = readMIC();
     
     // Only send if the change is significant.
-    if (abs(micValue - lastSentMic) < MIC_CHANGE_THRESHOLD)
+    if (abs(value - lastSentValue) < MIC_CHANGE_THRESHOLD)
         return;
+    lastSentValue = value;
     
-    lastSentMic = micValue;
-    
+    // Build the address string
+    char address[20];
+    snprintf(address, sizeof(address), "/mic");
+
     if (MIC.serial)
-        sendSerial("MIC", micValue);
+        sendSerial(address, value);
     if (MIC.osc)
-        sendOSC("/tesi/mic", micValue);
+        sendOSC(address, value);
     if (MIC.oocsi)
-        sendOOCSI(CHANNEL, "/tesi/mic", micValue);
+        sendOOCSI(CHANNEL, address, value);
 }

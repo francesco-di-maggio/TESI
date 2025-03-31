@@ -6,6 +6,12 @@
 #include <WiFiUdp.h>
 #include <OOCSI.h>
 
+// Global Device Index (change this in config.cpp to update your board's identity)
+extern const int DEVICE_INDEX;
+
+// Global Base Address for OSC and OOCSI messages.
+extern const char* BASE_ADDRESS;
+
 // ----------------------
 // Sensor Configuration Struct
 // ----------------------

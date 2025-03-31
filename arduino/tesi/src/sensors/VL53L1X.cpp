@@ -102,21 +102,24 @@ int readDistance() {
 // Sends the filtered distance via Serial, OSC, and OOCSI if the value changes
 // by at least DIST_CHANGE_THRESHOLD (in mm) compared to the last sent value.
 void sendDistance() {
-    static int lastSentDistance = -1;
-    int distance = readDistance();
+    static int lastSentValue = -1;
+    int value = readDistance();
     
-    if (abs(distance - lastSentDistance) < DIST_CHANGE_THRESHOLD)
+    if (abs(value - lastSentValue) < DIST_CHANGE_THRESHOLD)
         return;
-    
-    lastSentDistance = distance;
-    
+    lastSentValue = value;
+
+    // Build the address string
+    char address[20];
+    snprintf(address, sizeof(address), "/distance");
+
     if (DISTANCE.serial) {
-        sendSerial("DISTANCE", distance);
+        sendSerial(address, value);
     }
     if (DISTANCE.osc) {
-        sendOSC("/tesi/distance", distance);
+        sendOSC(address, value);
     }
     if (DISTANCE.oocsi) {
-        sendOOCSI(CHANNEL, "/tesi/distance", distance);
+        sendOOCSI(CHANNEL, address, value);
     }
 }

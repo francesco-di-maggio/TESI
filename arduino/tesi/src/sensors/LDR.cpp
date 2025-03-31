@@ -64,22 +64,26 @@ int readLDR() {
 // -------------------------------------------------------------------------
 // Sends the filtered LDR value via Serial, OSC, and OOCSI only if it has changed.
 void sendLDR() {
-    static int lastSentLDR = -1; // Holds the last sent value
-    int ldrValue = readLDR();
+    static int lastSentValue = -1; // Holds the last sent value
+    int value = readLDR();
     
     // Only send if the value has changed.
-    if (ldrValue == lastSentLDR) {
+    if (value == lastSentValue) {
         return;
     }
-    lastSentLDR = ldrValue;
+    lastSentValue = value;
     
+    // Build the address string
+    char address[20];
+    snprintf(address, sizeof(address), "/ldr");
+
     if (LDR.serial) {
-        sendSerial("LDR", ldrValue);
+        sendSerial(address, value);
     }
     if (LDR.osc) {
-        sendOSC("/tesi/ldr", ldrValue);
+        sendOSC(address, value);
     }
     if (LDR.oocsi) {
-        sendOOCSI(CHANNEL, "/tesi/ldr", ldrValue);
+        sendOOCSI(CHANNEL, address, value);
     }
 }

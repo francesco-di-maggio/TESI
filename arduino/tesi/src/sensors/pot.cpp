@@ -79,18 +79,21 @@ int readPOT() {
 // value sent, to avoid redundant output.
 void sendPOT() {
     static int lastSentValue = -1; // Tracks the last sent value (initially -1 so that any valid value is sent)
-    int potValue = readPOT();
+    int value = readPOT();
 
     // Only send if the value has changed
-    if (potValue == lastSentValue)
+    if (value == lastSentValue)
         return;
+    lastSentValue = value;
 
-    lastSentValue = potValue;
+    // Build the address string
+    char address[20];
+    snprintf(address, sizeof(address), "/pot");
 
     if (POT.serial)
-        sendSerial("POT", potValue);
+        sendSerial(address, value);
     if (POT.osc)
-        sendOSC("/tesi/pot", potValue);
+        sendOSC(address, value);
     if (POT.oocsi)
-        sendOOCSI(CHANNEL, "/tesi/pot", potValue);
+        sendOOCSI(CHANNEL, address, value);
 }

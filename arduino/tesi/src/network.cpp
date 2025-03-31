@@ -43,5 +43,6 @@ void setupOOCSI() {
   // Setting up OOCSI. processOOCSI is the name of the function to call when receiving messages, can be a random function name
   // Connect WiFi and OOCSI to the server
   oocsi.connect(OOCSIName, HOSTSERVER, SSID, PASS);
+  oocsi.subscribe(CHANNEL);
   Serial.println();
 }

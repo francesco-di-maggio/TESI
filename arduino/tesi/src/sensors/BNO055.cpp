@@ -61,10 +61,15 @@ void sendQUAT() {
             lastSentQuat[i] = quatValues[i];
         }
         firstRun = false;
-        if (QUAT.serial) sendSerial("QUAT", quatValues, 4);
-        if (QUAT.osc) sendOSC("/tesi/quat", quatValues, 4);
-        if (QUAT.oocsi) sendOOCSI(CHANNEL, "/tesi/quat", quatValues, 4);
-        return;
+
+        // Build the address string once using a local char array.
+        char address[20];
+        snprintf(address, sizeof(address), "/quat");
+        
+        if (QUAT.serial) sendSerial(address, quatValues, 4);
+        if (QUAT.osc) sendOSC(address, quatValues, 4);
+        if (QUAT.oocsi) sendOOCSI(CHANNEL, address, quatValues, 4);
+        return;        
     }
     
     // Compute the dot product between the current and last sent quaternions.
@@ -91,7 +96,11 @@ void sendQUAT() {
         lastSentQuat[i] = quatValues[i];
     }
     
-    if (QUAT.serial) sendSerial("QUAT", quatValues, 4);
-    if (QUAT.osc) sendOSC("/tesi/quat", quatValues, 4);
-    if (QUAT.oocsi) sendOOCSI(CHANNEL, "/tesi/quat", quatValues, 4);
+    // Build the address string once using a local variable.
+    char address[20];
+    snprintf(address, sizeof(address), "/quat");
+    
+    if (QUAT.serial) sendSerial(address, quatValues, 4);
+    if (QUAT.osc) sendOSC(address, quatValues, 4);
+    if (QUAT.oocsi) sendOOCSI(CHANNEL, address, quatValues, 4);
 }

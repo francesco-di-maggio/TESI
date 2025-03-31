@@ -16,8 +16,14 @@ void printMacAddress();
 // -------------------------------------------------------------------------
 template <typename T>
 void sendOSC(const char* address, const T& value, int length = 1) {
-    OSCMessage msg(address);
-    if constexpr (std::is_array_v<T> || std::is_pointer_v<T>) { 
+    char fullAddress[64];
+    // Build an OSC address as: "/<DEVICE_INDEX><BASE_ADDRESS><address>"
+    // For example, if DEVICE_INDEX is 1, BASE_ADDRESS is "/tesi", and address is "/battery",
+    // then fullAddress becomes "/1/tesi/battery"
+    snprintf(fullAddress, sizeof(fullAddress), "/%d%s%s", DEVICE_INDEX, BASE_ADDRESS, address);
+    
+    OSCMessage msg(fullAddress);
+    if constexpr (std::is_array_v<T> || std::is_pointer_v<T>) {
         for (int i = 0; i < length; i++) {
             msg.add(value[i]);
         }
@@ -35,9 +41,12 @@ void sendOSC(const char* address, const T& value, int length = 1) {
 // -------------------------------------------------------------------------
 template <typename T>
 void sendSerial(const char* label, const T& value, int length = 1) {
+    // Print device index first, then label, then value.
+    Serial.print(DEVICE_INDEX);
+    Serial.print(" ");
     Serial.print(label);
     Serial.print(" ");
-    if constexpr (std::is_array_v<T> || std::is_pointer_v<T>) { 
+    if constexpr (std::is_array_v<T> || std::is_pointer_v<T>) {
         for (int i = 0; i < length; i++) {
             Serial.print(value[i]);
             Serial.print(" ");
@@ -46,56 +55,43 @@ void sendSerial(const char* label, const T& value, int length = 1) {
     } else {
         Serial.println(value);
     }
-    Serial.println();
+    // Serial.println();
 }
 
 // -------------------------------------------------------------------------
-// Generic Function to Send OOCSI Messages
+// Generic Function to Send OOCSI Messages (Handles Single Values & Arrays)
 // -------------------------------------------------------------------------
-// template <typename T>
-// void sendOOCSI(const char* channel, const char* key, const T& value, int length = 1) {
-//     oocsi.newMessage(channel);
-//     if constexpr (std::is_same_v<T, int>) {
-//         oocsi.addInt(key, value);
-//     } else if constexpr (std::is_same_v<T, float>) {
-//         oocsi.addFloat(key, value);
-//     } else if constexpr (std::is_same_v<T, long>) {
-//         oocsi.addLong(key, value);
-//     } else if constexpr (std::is_same_v<T, const char*>) {
-//         oocsi.addString(key, value);
-//     } else if constexpr (std::is_array_v<T> || std::is_pointer_v<T>) {
-//         if constexpr (std::is_same_v<std::remove_pointer_t<T>, int>) {
-//             oocsi.addIntArray(key, value, length);
-//         } else if constexpr (std::is_same_v<std::remove_pointer_t<T>, float>) {
-//             oocsi.addFloatArray(key, value, length);
-//         }
-//     }
-//     oocsi.sendMessage();
-// }
-
-// Trying to output list with quat.... remove and revert to previous code if not working.
-// In Max I now have oocsiparsALL.... revert that as well if necessary.
 template <typename T>
-void sendOOCSI(const char* channel, const char* key, T value, int length = 1) {
+void sendOOCSI(const char* channel, const char* key, const T& value, int length = 1) {
+    char fullKey[64];
+    // Build the OOCSI key as: "<BASE_ADDRESS><key>"
+    // Example: if BASE_ADDRESS is "/tesi" and key is "/pot",
+    // then fullKey becomes "/tesi/pot"
+    snprintf(fullKey, sizeof(fullKey), "%s%s", BASE_ADDRESS, key);
+
     oocsi.newMessage(channel);
-    if constexpr (std::is_pointer_v<T>) {
-        // If T is a pointer (e.g., float* or int*), call the array function.
-        using BaseT = std::remove_pointer_t<T>;
+
+    if constexpr (std::is_array_v<T> || std::is_pointer_v<T>) {
+        // For arrays or pointer types, determine the underlying type.
+        using BaseT = std::conditional_t<std::is_array_v<T>,
+                                         std::remove_extent_t<T>,
+                                         std::remove_pointer_t<T>>;
         if constexpr (std::is_same_v<BaseT, float>) {
-            oocsi.addFloatArray(key, value, length);
+            // Cast away const (safe if addFloatArray doesn't modify the data)
+            oocsi.addFloatArray(fullKey, const_cast<float*>(value), length);
         } else if constexpr (std::is_same_v<BaseT, int>) {
-            oocsi.addIntArray(key, value, length);
+            oocsi.addIntArray(fullKey, const_cast<int*>(value), length);
         }
     } else {
-        // Otherwise, for single values, choose the appropriate add function.
+        // Handle single values:
         if constexpr (std::is_same_v<T, int>) {
-            oocsi.addInt(key, value);
+            oocsi.addInt(fullKey, value);
         } else if constexpr (std::is_same_v<T, float>) {
-            oocsi.addFloat(key, value);
+            oocsi.addFloat(fullKey, value);
         } else if constexpr (std::is_same_v<T, long>) {
-            oocsi.addLong(key, value);
+            oocsi.addLong(fullKey, value);
         } else if constexpr (std::is_same_v<T, const char*>) {
-            oocsi.addString(key, value);
+            oocsi.addString(fullKey, value);
         }
     }
     oocsi.sendMessage();

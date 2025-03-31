@@ -36,7 +36,7 @@ void readButtons(int (&buttons)[8]) {
 // -------------------------------------------------------------------------
 // Sends Individual Messages for Each Button that Changed State
 // -------------------------------------------------------------------------
-// Each button sends a message with an address like "/tesi/button/1".
+// Each button sends a message with an address like "/button/1".
 // Only sends a message when a button's state changes.
 void sendButtons() {
     static int lastSentButtons[8] = { -1, -1, -1, -1, -1, -1, -1, -1 };
@@ -47,9 +47,9 @@ void sendButtons() {
         if (buttons[i] != lastSentButtons[i]) {
             lastSentButtons[i] = buttons[i];
 
-            // Create address string, e.g., "/tesi/button/1"
+            // Create address string, e.g., "/button/1"
             char address[20];
-            snprintf(address, sizeof(address), "/tesi/button/%d", i + 1);
+            snprintf(address, sizeof(address), "/button/%d", i + 1);
 
             // Send the individual button state via Serial, OSC, and OOCSI
             if (CAP.serial) {
