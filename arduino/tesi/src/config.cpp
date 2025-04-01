@@ -1,20 +1,20 @@
 #include "config.h"
 
 // Change these values to update your board's identity:
-const int DEVICE_INDEX = 1;             // For example, set to 1 for board 1 (change to 2, 3, etc. as needed)
+const int DEVICE_INDEX = 2;             // For example, set to 1 for board 1 (change to 2, 3, etc. as needed)
 const char* BASE_ADDRESS = "/tesi";     // Base address used for OSC and OOCSI messages
 
 // -------------------------------------------------------------------------
 // Define each sensor with its ON/OFF, OSC, Serial, OOCSI and Sample Rate settings
 // -------------------------------------------------------------------------
-SensorConfig BATTERY  = {1, 0, 0, 1, 4000}; // Batter ON/OFF, OSC, Serial, OOCSI, Refresh Rate (ms)
-SensorConfig LDR      = {1, 0, 0, 1, 20};
-SensorConfig MIC      = {1, 1, 0, 0, 20};
-SensorConfig POT      = {1, 0, 0, 1, 10};
-SensorConfig DISTANCE = {1, 0, 0, 1, 20};
-SensorConfig QUAT     = {1, 1, 0, 0, 20};
-SensorConfig PUSH     = {1, 0, 0, 1, 5};
-SensorConfig CAP      = {1, 0, 0, 1, 5};
+SensorConfig BATTERY  = {1, 1, 0, 0, 4000}; // Batter ON/OFF, OSC, Serial, OOCSI, Refresh Rate (ms)
+SensorConfig LDR      = {1, 1, 0, 0, 20};
+SensorConfig MIC      = {1, 1, 0, 0, 40};
+SensorConfig POT      = {1, 1, 0, 0, 10};
+SensorConfig DISTANCE = {1, 1, 0, 0, 20};
+SensorConfig QUAT     = {1, 1, 0, 0, 40};
+SensorConfig PUSH     = {1, 1, 0, 0, 5};
+SensorConfig CAP      = {1, 1, 0, 0, 5};
 
 // -------------------------------------------------------------------------
 // WiFi & OSC Configuration

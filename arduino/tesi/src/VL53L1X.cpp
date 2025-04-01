@@ -8,20 +8,20 @@
 static float kalmanEstimate = 0.0f;       // Current filtered distance (mm)
 static float kalmanError = 1.0f;          // Estimate uncertainty
 // Tune these parameters for faster response vs. smoothness:
-const float kalmanProcessNoise = 0.02f;     // Increase for faster adaptation
+const float kalmanProcessNoise = 0.05f;     // Increase for faster adaptation
 const float kalmanMeasurementNoise = 2.0f;  // Lower for more responsiveness
 
 // -------------------------------------------------------------------------
 // Adaptive Blending Parameters for VL53L1X
 // -------------------------------------------------------------------------
-const int DIST_DEADZONE = 10;              // Minimum raw difference (in mm) to trigger an update
+const int DIST_DEADZONE = 5;               // Minimum raw difference (in mm) to trigger an update
 const float DIST_MOVING_BLEND = 0.8f;      // Fast blend factor when a significant change occurs
 const float DIST_IDLE_BLEND = 0.2f;        // Slow blend factor when change is minor
 
 // -------------------------------------------------------------------------
 // Update Threshold (for sending)
 // -------------------------------------------------------------------------
-const int DIST_CHANGE_THRESHOLD = 5;     // Only send if filtered value changes by at least 5 mm
+const int DIST_CHANGE_THRESHOLD = 1;       // Only send if filtered value changes by at least 5 mm
 
 // -------------------------------------------------------------------------
 // initVL53L1X()
