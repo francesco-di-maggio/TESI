@@ -1,6 +1,6 @@
 #include "VL53L1X.h"
 #include <Arduino.h>
-#include "src/sensors.h"          // To access the global VL53_SENSOR
+#include "sensors.h"          // To access the global VL53_SENSOR
 
 // -------------------------------------------------------------------------
 // Kalman Filter Variables for VL53L1X

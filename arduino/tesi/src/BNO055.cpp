@@ -1,5 +1,5 @@
 #include "BNO055.h"
-#include "src/sensors.h"          // To access the global BNO_SENSOR
+#include "sensors.h"          // To access the global BNO_SENSOR
 #include <utility/imumaths.h>     // For imu::Quaternion
 #include <math.h>                 // For acos(), fabs()
 

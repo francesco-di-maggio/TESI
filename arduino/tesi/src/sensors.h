@@ -8,14 +8,14 @@
 #include <Adafruit_VL53L1X.h>
 #include <Adafruit_MPR121.h>
 
-#include "sensors/pot.h"
-#include "sensors/MPR121.h"
-#include "sensors/push.h"
-#include "sensors/battery.h"
-#include "sensors/BNO055.h"
-#include "sensors/LDR.h"
-#include "sensors/VL53L1X.h"
-#include "sensors/MAX4466.h"
+#include "pot.h"
+#include "MPR121.h"
+#include "push.h"
+#include "battery.h"
+#include "BNO055.h"
+#include "LDR.h"
+#include "VL53L1X.h"
+#include "MAX4466.h"
 
 // ----------------------
 // Sensor Instances (Declared Here, Defined in sensors.cpp)

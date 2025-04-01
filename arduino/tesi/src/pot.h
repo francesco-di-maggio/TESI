@@ -1,7 +1,7 @@
 #ifndef POT_H
 #define POT_H
 
-#include "src/config.h"
+#include "config.h"
 
 // Function prototypes
 void initPOT();

@@ -1,5 +1,5 @@
 #include "pot.h"
-#include "src/utilities.h"
+#include "utilities.h"
 
 // -------------------------------------------------------------------------
 // Kalman Filter Variables

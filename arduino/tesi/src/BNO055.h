@@ -1,8 +1,8 @@
 #ifndef BNO055_H
 #define BNO055_H
 
-#include "src/config.h"
-#include "src/utilities.h"
+#include "config.h"
+#include "utilities.h"
 
 // -------------------------------------------------------------------------
 // Function Prototypes for BNO055 Quaternion Sensor

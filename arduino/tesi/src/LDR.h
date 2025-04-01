@@ -1,8 +1,8 @@
 #ifndef LDR_H
 #define LDR_H
 
-#include "src/config.h"
-#include "src/utilities.h"
+#include "config.h"
+#include "utilities.h"
 
 // -------------------------------------------------------------------------
 // Function Prototypes for LDR Sensor Module

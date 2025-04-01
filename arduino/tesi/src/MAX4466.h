@@ -1,8 +1,8 @@
 #ifndef MIC_H
 #define MIC_H
 
-#include "src/config.h"
-#include "src/utilities.h"
+#include "config.h"
+#include "utilities.h"
 
 // -------------------------------------------------------------------------
 // Function Prototypes for MAX4466 Microphone Sensor

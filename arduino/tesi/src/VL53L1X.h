@@ -1,8 +1,8 @@
 #ifndef VL53L1X_H
 #define VL53L1X_H
 
-#include "src/config.h"
-#include "src/utilities.h"
+#include "config.h"
+#include "utilities.h"
 
 // -------------------------------------------------------------------------
 // Function Prototypes for VL53L1X Distance Sensor

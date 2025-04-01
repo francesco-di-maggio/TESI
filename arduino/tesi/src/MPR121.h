@@ -1,9 +1,9 @@
 #ifndef MPR121_H
 #define MPR121_H
 
-#include "src/config.h"      // Provides CAP_SENSOR, CHANNEL, etc.
-#include "src/sensors.h"     // To access sensor globals such as CAP_SENSOR
-#include "src/utilities.h"   // For sendSerial(), sendOSC(), sendOOCSI()
+#include "config.h"      // Provides CAP_SENSOR, CHANNEL, etc.
+#include "sensors.h"     // To access sensor globals such as CAP_SENSOR
+#include "utilities.h"   // For sendSerial(), sendOSC(), sendOOCSI()
 
 // -------------------------------------------------------------------------
 // Function Prototypes for MPR121 Sensor Module

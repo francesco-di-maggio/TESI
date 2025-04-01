@@ -1,8 +1,8 @@
 #ifndef PUSH_H
 #define PUSH_H
 
-#include "src/config.h"      // Provides PUSH_PIN1, PUSH_PIN2, CHANNEL, and PUSH config
-#include "src/utilities.h"   // For setColor(), sendSerial(), sendOSC(), sendOOCSI()
+#include "config.h"      // Provides PUSH_PIN1, PUSH_PIN2, CHANNEL, and PUSH config
+#include "utilities.h"   // For setColor(), sendSerial(), sendOSC(), sendOOCSI()
 
 // -------------------------------------------------------------------------
 // Function Prototypes for Two Push Buttons
