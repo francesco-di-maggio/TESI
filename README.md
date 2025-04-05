@@ -1,7 +1,7 @@
 # TESI — TANGIBLE EMBODIED SOUND INTERACTION
 
 <p align="left">
-  <img alt="TESI" src="images/tesi/tesi.jpg" width="765">
+  <img alt="TESI" src="tesi/tesi.jpg" width="765">
 </p>
 
 ## About
