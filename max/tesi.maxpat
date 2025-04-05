@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 62.0, 779.0, 567.0 ],
+		"rect" : [ 0.0, 59.0, 656.0, 157.0 ],
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
 		"gridsnaponopen" : 2,
@@ -70,8 +70,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 260.0, 61.0, 163.0, 22.0 ],
-					"text" : "loadmess tesi_patcher_sizes"
+					"patching_rect" : [ 260.0, 61.0, 113.0, 22.0 ],
+					"text" : "loadmess tesi-sizes"
 				}
 
 			}
@@ -105,7 +105,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 525.0, 60.0, 286.0, 22.0 ],
+					"patching_rect" : [ 504.0, 60.0, 286.0, 22.0 ],
 					"text" : "About, Receive, Visualize, Process, Map, MLP, PCA"
 				}
 
@@ -127,7 +127,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 88.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 26.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -504,7 +504,7 @@
 
 											}
  ],
-										"originid" : "pat-85676"
+										"originid" : "pat-4448"
 									}
 ,
 									"patching_rect" : [ 178.0, 812.0, 41.0, 22.0 ],
@@ -696,7 +696,7 @@
 
 							}
  ],
-						"originid" : "pat-85664"
+						"originid" : "pat-4436"
 					}
 ,
 					"patching_rect" : [ 61.0, 185.0, 62.0, 22.0 ],
@@ -784,7 +784,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 404.0, 212.0, 102.0, 22.0 ],
-									"text" : "Process"
+									"text" : "About"
 								}
 
 							}
@@ -1387,10 +1387,10 @@
 
 							}
  ],
-						"originid" : "pat-87566"
+						"originid" : "pat-6338"
 					}
 ,
-					"patching_rect" : [ 525.0, 91.0, 35.0, 22.0 ],
+					"patching_rect" : [ 504.0, 91.0, 35.0, 22.0 ],
 					"text" : "p tab"
 				}
 
@@ -1404,7 +1404,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 525.0, 122.0, 89.0, 22.0 ],
+					"patching_rect" : [ 504.0, 122.0, 89.0, 22.0 ],
 					"text" : "setactivetab $1"
 				}
 
@@ -1426,7 +1426,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 85.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -1578,7 +1578,7 @@
 
 											}
  ],
-										"originid" : "pat-87580"
+										"originid" : "pat-6352"
 									}
 ,
 									"patching_rect" : [ 120.0, 276.0, 56.0, 22.0 ],
@@ -2364,7 +2364,7 @@
 
 											}
  ],
-										"originid" : "pat-87582"
+										"originid" : "pat-6354"
 									}
 ,
 									"patching_rect" : [ 207.5, 276.0, 52.0, 22.0 ],
@@ -2403,7 +2403,7 @@
 
 							}
  ],
-						"originid" : "pat-87568"
+						"originid" : "pat-6340"
 					}
 ,
 					"patching_rect" : [ 61.0, 61.0, 49.0, 22.0 ],
@@ -2429,7 +2429,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 26.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -2966,7 +2966,7 @@
 
 											}
  ],
-										"originid" : "pat-87612"
+										"originid" : "pat-6384"
 									}
 ,
 									"patching_rect" : [ 455.0, 460.0, 71.0, 22.0 ],
@@ -3164,7 +3164,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.0, 796.600000000000023, 214.0, 129.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 462.0, 251.0, 214.0, 129.0 ],
+									"presentation_rect" : [ 462.0, 221.0, 214.0, 129.0 ],
 									"varname" : "mo.sliders[2]",
 									"viewvisibility" : 1
 								}
@@ -3237,7 +3237,7 @@
 									"offset" : [ 0.0, 0.0 ],
 									"patching_rect" : [ 30.0, 1030.0, 214.0, 129.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 678.0, 251.0, 214.0, 129.0 ],
+									"presentation_rect" : [ 678.0, 221.0, 214.0, 129.0 ],
 									"varname" : "mo.ctlouts",
 									"viewvisibility" : 1
 								}
@@ -3271,7 +3271,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 30.0, 713.399999999999977, 214.0, 62.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 30.0, 251.0, 214.0, 62.0 ],
+									"presentation_rect" : [ 30.0, 221.0, 214.0, 62.0 ],
 									"varname" : "mo.regress",
 									"viewvisibility" : 1
 								}
@@ -3503,7 +3503,7 @@
 
 							}
  ],
-						"originid" : "pat-87584",
+						"originid" : "pat-6356",
 						"styles" : [ 							{
 								"name" : "MP-M4L",
 								"default" : 								{
@@ -3545,7 +3545,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 525.0, 173.0, 137.0, 22.0 ],
+					"patching_rect" : [ 504.0, 173.0, 137.0, 22.0 ],
 					"text" : "universal 1 @descend 1"
 				}
 
@@ -3557,7 +3557,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 440.0, 173.0, 67.0, 22.0 ],
+					"patching_rect" : [ 419.0, 173.0, 67.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -3701,10 +3701,10 @@
 
 							}
  ],
-						"originid" : "pat-87902"
+						"originid" : "pat-6674"
 					}
 ,
-					"patching_rect" : [ 440.0, 91.0, 60.0, 22.0 ],
+					"patching_rect" : [ 419.0, 91.0, 60.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"fontname" : "Ableton Sans Medium"
 					}
@@ -3720,7 +3720,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 440.0, 60.0, 58.0, 22.0 ],
+					"patching_rect" : [ 419.0, 60.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -3742,7 +3742,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 26.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -4234,7 +4234,7 @@
 
 											}
  ],
-										"originid" : "pat-87916"
+										"originid" : "pat-6688"
 									}
 ,
 									"patching_rect" : [ 453.0, 422.0, 71.0, 22.0 ],
@@ -4478,7 +4478,7 @@
 									"offset" : [ 0.0, 0.0 ],
 									"patching_rect" : [ 30.0, 962.0, 214.0, 129.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 678.0, 251.0, 214.0, 129.0 ],
+									"presentation_rect" : [ 678.0, 221.0, 214.0, 129.0 ],
 									"varname" : "mo.ctlouts",
 									"viewvisibility" : 1
 								}
@@ -4549,7 +4549,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 30.0, 682.0, 214.0, 170.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 30.0, 251.0, 214.0, 170.0 ],
+									"presentation_rect" : [ 30.0, 221.0, 214.0, 170.0 ],
 									"varname" : "mo.regress",
 									"viewvisibility" : 1
 								}
@@ -4574,7 +4574,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 560.0, 456.0, 214.0, 129.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 462.0, 251.0, 214.0, 129.0 ],
+									"presentation_rect" : [ 462.0, 221.0, 214.0, 129.0 ],
 									"varname" : "mo.sliders",
 									"viewvisibility" : 1
 								}
@@ -4815,7 +4815,7 @@
 
 							}
  ],
-						"originid" : "pat-87904",
+						"originid" : "pat-6676",
 						"styles" : [ 							{
 								"name" : "MP-M4L",
 								"default" : 								{
@@ -4868,7 +4868,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 26.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -5291,7 +5291,7 @@
 
 											}
  ],
-										"originid" : "pat-88222"
+										"originid" : "pat-6994"
 									}
 ,
 									"patching_rect" : [ 915.0, 343.0, 53.0, 22.0 ],
@@ -6005,7 +6005,7 @@
 
 							}
  ],
-						"originid" : "pat-88220"
+						"originid" : "pat-6992"
 					}
 ,
 					"patching_rect" : [ 61.0, 102.333333333333329, 62.0, 22.0 ],
@@ -6031,7 +6031,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 26.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -6393,7 +6393,7 @@
 
 											}
  ],
-										"originid" : "pat-88394"
+										"originid" : "pat-7166"
 									}
 ,
 									"patching_rect" : [ 470.0, 310.0, 64.0, 31.0 ],
@@ -6847,7 +6847,7 @@
 
 											}
  ],
-										"originid" : "pat-88396"
+										"originid" : "pat-7168"
 									}
 ,
 									"patching_rect" : [ 1787.0, 431.0, 71.0, 22.0 ],
@@ -7471,7 +7471,7 @@
 
 											}
  ],
-										"originid" : "pat-88602"
+										"originid" : "pat-7374"
 									}
 ,
 									"patching_rect" : [ 1245.0, 431.0, 71.0, 22.0 ],
@@ -7988,7 +7988,7 @@
 
 											}
  ],
-										"originid" : "pat-88676"
+										"originid" : "pat-7448"
 									}
 ,
 									"patching_rect" : [ 453.0, 431.0, 71.0, 22.0 ],
@@ -8674,7 +8674,7 @@
 
 							}
  ],
-						"originid" : "pat-88392"
+						"originid" : "pat-7164"
 					}
 ,
 					"patching_rect" : [ 61.0, 226.333333333333314, 42.0, 22.0 ],
@@ -8700,7 +8700,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 779.0, 541.0 ],
+						"rect" : [ 0.0, 26.0, 656.0, 131.0 ],
 						"openinpresentation" : 1,
 						"gridonopen" : 2,
 						"gridsize" : [ 10.0, 10.0 ],
@@ -9057,7 +9057,7 @@
 
 											}
  ],
-										"originid" : "pat-89012"
+										"originid" : "pat-7784"
 									}
 ,
 									"patching_rect" : [ 178.0, 622.0, 41.0, 22.0 ],
@@ -9249,7 +9249,7 @@
 
 							}
  ],
-						"originid" : "pat-89000"
+						"originid" : "pat-7772"
 					}
 ,
 					"patching_rect" : [ 61.0, 143.666666666666657, 66.0, 22.0 ],
@@ -9262,7 +9262,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 449.5, 159.0, 534.5, 159.0 ],
+					"midpoints" : [ 428.5, 159.0, 513.5, 159.0 ],
 					"order" : 0,
 					"source" : [ "obj-10", 0 ]
 				}
@@ -9271,7 +9271,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 449.5, 114.0, 449.5, 114.0 ],
+					"midpoints" : [ 428.5, 114.0, 428.5, 114.0 ],
 					"order" : 1,
 					"source" : [ "obj-10", 0 ]
 				}
@@ -9280,7 +9280,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-51", 0 ],
-					"midpoints" : [ 534.5, 84.0, 534.5, 84.0 ],
+					"midpoints" : [ 513.5, 84.0, 513.5, 84.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -9296,7 +9296,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 534.5, 159.0, 449.5, 159.0 ],
+					"midpoints" : [ 513.5, 159.0, 428.5, 159.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -9328,7 +9328,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"midpoints" : [ 534.5, 114.0, 534.5, 114.0 ],
+					"midpoints" : [ 513.5, 114.0, 513.5, 114.0 ],
 					"source" : [ "obj-51", 0 ]
 				}
 
@@ -9336,18 +9336,17 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"midpoints" : [ 449.5, 84.0, 449.5, 84.0 ],
+					"midpoints" : [ 428.5, 84.0, 428.5, 84.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
-		"originid" : "pat-85652",
+		"originid" : "pat-4424",
 		"parameters" : 		{
 			"obj-11::obj-1::obj-1" : [ "live.text[1768]", "live.text", 0 ],
 			"obj-11::obj-1::obj-4" : [ "live.text[1767]", "live.text", 0 ],
 			"obj-11::obj-3::obj-101::obj-20" : [ "live.numbox[1]", "live.dial[12]", 0 ],
-			"obj-11::obj-3::obj-101::obj-22" : [ "live.numbox[561]", "live.dial[12]", 0 ],
 			"obj-11::obj-3::obj-101::obj-24" : [ "live.numbox[343]", "live.dial[12]", 0 ],
 			"obj-11::obj-3::obj-101::obj-49" : [ "live.text[1433]", "live.text", 0 ],
 			"obj-11::obj-3::obj-101::obj-65" : [ "live.numbox[576]", "live.numbox", 0 ],
@@ -9576,7 +9575,6 @@
 			"obj-11::obj-3::obj-7::obj-74::obj-35" : [ "live.text[1493]", "live.text", 0 ],
 			"obj-11::obj-3::obj-7::obj-74::obj-9" : [ "live.text[1494]", "live.text", 0 ],
 			"obj-11::obj-4::obj-101::obj-20" : [ "live.numbox[378]", "live.dial[12]", 0 ],
-			"obj-11::obj-4::obj-101::obj-22" : [ "live.numbox[560]", "live.dial[12]", 0 ],
 			"obj-11::obj-4::obj-101::obj-24" : [ "live.numbox[385]", "live.dial[12]", 0 ],
 			"obj-11::obj-4::obj-101::obj-49" : [ "live.text[1518]", "live.text", 0 ],
 			"obj-11::obj-4::obj-101::obj-65" : [ "live.numbox[386]", "live.numbox", 0 ],
@@ -9805,7 +9803,6 @@
 			"obj-11::obj-4::obj-7::obj-74::obj-35" : [ "live.text[1570]", "live.text", 0 ],
 			"obj-11::obj-4::obj-7::obj-74::obj-9" : [ "live.text[1571]", "live.text", 0 ],
 			"obj-11::obj-5::obj-101::obj-20" : [ "live.numbox[352]", "live.dial[12]", 0 ],
-			"obj-11::obj-5::obj-101::obj-22" : [ "live.numbox[559]", "live.dial[12]", 0 ],
 			"obj-11::obj-5::obj-101::obj-24" : [ "live.numbox[344]", "live.dial[12]", 0 ],
 			"obj-11::obj-5::obj-101::obj-49" : [ "live.text[1583]", "live.text", 0 ],
 			"obj-11::obj-5::obj-101::obj-65" : [ "live.numbox[494]", "live.numbox", 0 ],
@@ -10034,7 +10031,6 @@
 			"obj-11::obj-5::obj-7::obj-74::obj-35" : [ "live.text[478]", "live.text", 0 ],
 			"obj-11::obj-5::obj-7::obj-74::obj-9" : [ "live.text[1656]", "live.text", 0 ],
 			"obj-11::obj-7::obj-101::obj-20" : [ "live.numbox[382]", "live.dial[12]", 0 ],
-			"obj-11::obj-7::obj-101::obj-22" : [ "live.numbox[558]", "live.dial[12]", 0 ],
 			"obj-11::obj-7::obj-101::obj-24" : [ "live.numbox[380]", "live.dial[12]", 0 ],
 			"obj-11::obj-7::obj-101::obj-49" : [ "live.text[1681]", "live.text", 0 ],
 			"obj-11::obj-7::obj-101::obj-65" : [ "live.numbox[387]", "live.numbox", 0 ],
@@ -11842,10 +11838,6 @@
 					"parameter_longname" : "live.numbox[1]"
 				}
 ,
-				"obj-11::obj-3::obj-101::obj-22" : 				{
-					"parameter_longname" : "live.numbox[561]"
-				}
-,
 				"obj-11::obj-3::obj-101::obj-24" : 				{
 					"parameter_longname" : "live.numbox[343]"
 				}
@@ -12708,10 +12700,6 @@
 ,
 				"obj-11::obj-4::obj-101::obj-20" : 				{
 					"parameter_longname" : "live.numbox[378]"
-				}
-,
-				"obj-11::obj-4::obj-101::obj-22" : 				{
-					"parameter_longname" : "live.numbox[560]"
 				}
 ,
 				"obj-11::obj-4::obj-101::obj-24" : 				{
@@ -13622,10 +13610,6 @@
 					"parameter_longname" : "live.numbox[352]"
 				}
 ,
-				"obj-11::obj-5::obj-101::obj-22" : 				{
-					"parameter_longname" : "live.numbox[559]"
-				}
-,
 				"obj-11::obj-5::obj-101::obj-24" : 				{
 					"parameter_longname" : "live.numbox[344]"
 				}
@@ -14532,11 +14516,6 @@
 ,
 				"obj-11::obj-7::obj-101::obj-20" : 				{
 					"parameter_longname" : "live.numbox[382]"
-				}
-,
-				"obj-11::obj-7::obj-101::obj-22" : 				{
-					"parameter_longname" : "live.numbox[558]",
-					"parameter_range" : [ 0.0, 4000.0 ]
 				}
 ,
 				"obj-11::obj-7::obj-101::obj-24" : 				{
@@ -21085,49 +21064,49 @@
 		"dependency_cache" : [ 			{
 				"name" : "a-mo.ctlout.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "a-mo.noteout.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "a-mo.pad.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "a-mo.prepend.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "a-mo.rslider.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "a-mo.settings.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "a-mo.slider.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/abstractions",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -21162,252 +21141,252 @@
 , 			{
 				"name" : "mo.click.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.color.txt",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/colls",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/colls",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/colls",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.colors.txt",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/colls",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/colls",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/colls",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.console.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/patchers/utility",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/patchers/utility",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/patchers/utility",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.crosspatch.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.ctlouts.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.dial.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.hslider.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.led.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.minmax.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.noteouts.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.number.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.pad.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.pads.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.pca.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.play.svg",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/icons",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/icons",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/icons",
 				"type" : "svg",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.poll.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.prepend.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/utility",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/utility",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/utility",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.receive.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.record.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/utility",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/utility",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/utility",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.record.svg",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/icons",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/icons",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/icons",
 				"type" : "svg",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.regress.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.resize.js",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/js",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/js",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.rsliders.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.send.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.sliders.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.smooth.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.speedlim.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.stop.svg",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/icons",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/icons",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/icons",
 				"type" : "svg",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.theme.js",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/misc/js",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/misc/js",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.thresholds.js",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/misc/js",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/misc/js",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.thresholds.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/patchers/transform",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/patchers/transform",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/patchers/transform",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.udpreceive.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/route",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.vslider.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo/patchers/input",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo/patchers/input",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo/patchers/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.wind.js",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/misc/js",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/misc/js",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mo.wind.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/modulo-plus/patchers/utility",
-				"patcherrelativepath" : "../../../../Max 9/Packages/modulo-plus/patchers/utility",
+				"patcherrelativepath" : "../../../Max 9/Packages/modulo-plus/patchers/utility",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -21417,64 +21396,64 @@
 			}
 , 			{
 				"name" : "oocsi.indexer.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.lookup.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.mapper.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.mapper.maxpat",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/abstractions",
-				"patcherrelativepath" : "../../../oocsi-max/abstractions",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/abstractions",
+				"patcherrelativepath" : "../../oocsi-max/misc/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.maxpat",
 				"bootpath" : "~/Documents/GitHub/oocsi-max/patchers",
-				"patcherrelativepath" : "../../../oocsi-max/patchers",
+				"patcherrelativepath" : "../../oocsi-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.presence.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.receiver.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.sender.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oocsi.strip.js",
-				"bootpath" : "~/Documents/GitHub/oocsi-max/js",
-				"patcherrelativepath" : "../../../oocsi-max/js",
+				"bootpath" : "~/Documents/GitHub/oocsi-max/misc/js",
+				"patcherrelativepath" : "../../oocsi-max/misc/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -21490,42 +21469,42 @@
 			}
 , 			{
 				"name" : "tesi-map.json",
-				"bootpath" : "~/Documents/GitHub/TESI/max/tesi/presets",
-				"patcherrelativepath" : "./presets",
+				"bootpath" : "~/Documents/GitHub/TESI/max/misc/presets",
+				"patcherrelativepath" : "./misc/presets",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tesi-pca.json",
-				"bootpath" : "~/Documents/GitHub/TESI/max/tesi/presets",
-				"patcherrelativepath" : "./presets",
+				"bootpath" : "~/Documents/GitHub/TESI/max/misc/presets",
+				"patcherrelativepath" : "./misc/presets",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tesi-receive.json",
-				"bootpath" : "~/Documents/GitHub/TESI/max/tesi/presets",
-				"patcherrelativepath" : "./presets",
+				"bootpath" : "~/Documents/GitHub/TESI/max/misc/presets",
+				"patcherrelativepath" : "./misc/presets",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tesi-regress.json",
-				"bootpath" : "~/Documents/GitHub/TESI/max/tesi/presets",
-				"patcherrelativepath" : "./presets",
+				"bootpath" : "~/Documents/GitHub/TESI/max/misc/presets",
+				"patcherrelativepath" : "./misc/presets",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tesi.process.maxpat",
-				"bootpath" : "~/Documents/GitHub/TESI/max/tesi/patchers",
+				"bootpath" : "~/Documents/GitHub/TESI/max/patchers",
 				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tesi.visualize.maxpat",
-				"bootpath" : "~/Documents/GitHub/TESI/max/tesi/patchers",
+				"bootpath" : "~/Documents/GitHub/TESI/max/patchers",
 				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
